@@ -1,0 +1,1004 @@
+Employee ID,Trip ID,Year,Charge Number,Expense Name,Expense Category,Price
+8,1,2019,1,Holiday Inn,Lodging,371.64
+95,1,2019,2,Taxi Service,Travel,57.83
+26,1,2019,3,Taxi Service,Travel,181.38
+60,1,2019,4,JetBlue Airways,Travel,395.66
+17,1,2019,5, Flat Tire,Other,201.86
+78,1,2019,6,The Capital Grille,Dining,187.15
+75,1,2019,7,Sheraton,Lodging,304.14
+48,1,2019,8,Office Depot,Other,110.49
+18,1,2019,9,Hilton Downtown,Lodging,891.23
+91,1,2019,10,Driving Range,Other,197.89
+59,1,2019,11,The Capital Grille,Dining,235.02
+9,2,2019,1,Parking Ticket,Incidental,339.59
+49,2,2019,2,Delta Airlines,Travel,321.49
+43,2,2019,3,Uber Ride,Travel,190.24
+36,2,2019,4,Holiday Inn,Lodging,717.02
+13,2,2019,5,Marriott,Lodging,530.57
+99,2,2019,6,United Airlines,Travel,400.39
+62,2,2019,7,Panera Bread,Dining,178.75
+12,2,2019,8,Delta Airlines,Travel,267.31
+26,2,2019,9,Housecleaning Fee,Incidental,334.38
+63,2,2019,10,Lyft Ride,Travel,54.97
+81,2,2019,11,Lyft Ride,Travel,143.85
+55,2,2019,12,Burger King,Dining,35.74
+76,2,2019,13,Parking Ticket,Incidental,195.73
+63,2,2019,14,Burger King,Dining,14.31
+60,2,2019,15,Panera Bread,Dining,296.22
+93,3,2019,1,Panera Bread,Dining,149.81
+97,3,2019,2,Delta Airlines,Travel,228.23
+77,3,2019,3,Housecleaning Fee,Incidental,442.84
+92,3,2019,4,Panera Bread,Dining,129.51
+24,3,2019,5,United Airlines,Travel,427.76
+78,3,2019,6,American Airlines,Travel,387.51
+4,3,2019,7,The Capital Grille,Dining,266.62
+7,3,2019,8,Starbucks,Dining,27.76
+22,3,2019,9,Panera Bread,Dining,215.03
+46,3,2019,10,Driving Range,Other,196.25
+62,3,2019,11,Holiday Inn,Lodging,745.58
+95,3,2019,12,Lyft Ride,Travel,66.81
+66,4,2019,1,JetBlue Airways,Travel,172.78
+56,4,2019,2,Sheraton,Lodging,542.28
+69,4,2019,3,United Airlines,Travel,239.42
+79,4,2019,4,Hilton Downtown,Lodging,810.2
+94,4,2019,5,American Airlines,Travel,378.02
+35,4,2019,6,Ruth's Chris Steak House,Dining,180.36
+24,4,2019,7,Hilton Downtown,Lodging,596.73
+1,4,2019,8,Driving Range,Other,116.83
+2,4,2019,9,Hilton Downtown,Lodging,581.17
+31,4,2019,10,Starbucks,Dining,34.22
+43,4,2019,11,Ruth's Chris Steak House,Dining,188.71
+27,4,2019,12,Southwest Airlines,Travel,130.62
+28,4,2019,13,Driving Range,Other,57.46
+2,4,2019,14,Sheraton,Lodging,844.35
+99,5,2019,1,Cinema,Other,239.01
+29,5,2019,2,Parking Ticket,Incidental,165.14
+93,5,2019,3,Starbucks,Dining,71.89
+89,5,2019,4,Uber Ride,Travel,64.02
+72,5,2019,5,MedCheck,Incidental,352.66
+45,5,2019,6,Sheraton,Lodging,329.19
+54,5,2019,7,Marriott,Lodging,858.85
+77,5,2019,8,JetBlue Airways,Travel,354.86
+53,5,2019,9,Cinema,Other,167.76
+13,6,2019,1,Hilton Downtown,Lodging,569.52
+38,6,2019,2,Sheraton,Lodging,583.48
+49,6,2019,3,Southwest Airlines,Travel,380.9
+19,6,2019,4,Marriott,Lodging,335.99
+18,6,2019,5,Housecleaning Fee,Incidental,239.62
+63,6,2019,6,Grand Hotel,Lodging,416.0
+23,7,2019,1,Lyft Ride,Travel,197.58
+49,7,2019,2,Ruth's Chris Steak House,Dining,163.64
+16,7,2019,3,Sheraton,Lodging,348.18
+2,7,2019,4,Delta Airlines,Travel,130.87
+88,7,2019,5, Flat Tire,Other,223.71
+87,7,2019,6,Housecleaning Fee,Incidental,480.06
+67,7,2019,7,Cinema,Other,240.52
+44,7,2019,8,The Capital Grille,Dining,297.65
+6,7,2019,9,Driving Range,Other,31.19
+52,7,2019,10,Office Depot,Other,118.36
+97,7,2019,11,Marriott,Lodging,752.44
+68,7,2019,12,Marriott,Lodging,886.82
+94,7,2019,13,Holiday Inn,Lodging,527.38
+33,7,2019,14,Lyft Ride,Travel,198.36
+80,8,2019,1,Grand Hotel,Lodging,377.19
+77,8,2019,2,Cinema,Other,24.54
+84,8,2019,3, Flat Tire,Other,36.97
+34,8,2019,4,Parking Ticket,Incidental,232.91
+80,8,2019,5,MedCheck,Incidental,308.85
+28,8,2019,6,Olive Garden,Dining,219.42
+3,8,2019,7,Panera Bread,Dining,284.9
+77,8,2019,8,Housecleaning Fee,Incidental,109.59
+10,8,2019,9,Marriott,Lodging,876.76
+53,8,2019,10,American Airlines,Travel,123.08
+27,9,2019,1,Uber Ride,Travel,158.99
+27,9,2019,2,Lyft Ride,Travel,120.73
+61,9,2019,3,Sheraton,Lodging,577.5
+97,9,2019,4,Olive Garden,Dining,121.83
+92,9,2019,5,Uber Ride,Travel,95.8
+67,9,2019,6,American Airlines,Travel,486.05
+33,9,2019,7,Golf Trip,Other,192.35
+44,9,2019,8, Flat Tire,Other,61.92
+99,9,2019,9,Olive Garden,Dining,176.88
+76,9,2019,10,The Cheesecake Factory,Dining,200.58
+21,9,2019,11,United Airlines,Travel,410.92
+11,9,2019,12,Olive Garden,Dining,128.41
+67,9,2019,13,Golf Trip,Other,131.01
+8,10,2019,1,Olive Garden,Dining,283.56
+32,10,2019,2,Ruth's Chris Steak House,Dining,236.32
+31,10,2019,3,Lyft Ride,Travel,63.84
+80,10,2019,4,Southwest Airlines,Travel,133.55
+58,10,2019,5,Uber Ride,Travel,100.61
+80,10,2019,6,Lyft Ride,Travel,197.38
+88,10,2019,7,Parking Ticket,Incidental,375.7
+33,10,2019,8,Driving Range,Other,105.53
+90,10,2019,9, Flat Tire,Other,69.99
+69,10,2019,10,The Cheesecake Factory,Dining,135.9
+63,10,2019,11,Holiday Inn,Lodging,876.36
+96,10,2019,12,Cinema,Other,84.64
+53,10,2019,13,The Capital Grille,Dining,190.33
+62,10,2019,14,Parking Ticket,Incidental,43.51
+40,10,2019,15,Olive Garden,Dining,129.77
+47,11,2019,1,Sheraton,Lodging,531.3
+70,11,2019,2,JetBlue Airways,Travel,411.88
+72,11,2019,3,Taxi Service,Travel,94.62
+61,11,2019,4,MedCheck,Incidental,272.41
+31,11,2019,5,The Cheesecake Factory,Dining,107.45
+51,11,2019,6,Ruth's Chris Steak House,Dining,112.62
+49,11,2019,7,Holiday Inn,Lodging,989.07
+78,11,2019,8,Office Depot,Other,215.53
+7,12,2019,1,Ruth's Chris Steak House,Dining,276.11
+50,12,2019,2,Parking Ticket,Incidental,352.37
+57,12,2019,3,Holiday Inn,Lodging,979.19
+88,12,2019,4,JetBlue Airways,Travel,316.98
+5,12,2019,5,Sheraton,Lodging,432.79
+46,12,2019,6, Flat Tire,Other,154.33
+29,12,2019,7,Starbucks,Dining,60.99
+87,12,2019,8,Golf Trip,Other,58.09
+9,12,2019,9,Uber Ride,Travel,89.29
+10,12,2019,10,Parking Ticket,Incidental,306.29
+3,12,2019,11,Golf Trip,Other,229.06
+49,12,2019,12,American Airlines,Travel,175.29
+49,12,2019,13,Burger King,Dining,38.2
+89,13,2019,1,Cinema,Other,55.56
+54,13,2019,2,Office Depot,Other,187.36
+53,13,2019,3,Office Depot,Other,192.88
+74,13,2019,4,Southwest Airlines,Travel,408.03
+47,13,2019,5,Office Depot,Other,229.94
+62,13,2019,6,Holiday Inn,Lodging,773.44
+51,13,2019,7,Hilton Downtown,Lodging,920.59
+22,13,2019,8,Delta Airlines,Travel,195.23
+69,13,2019,9,Taxi Service,Travel,110.0
+49,13,2019,10,Burger King,Dining,10.48
+68,13,2019,11,The Capital Grille,Dining,185.18
+52,13,2019,12,Uber Ride,Travel,191.35
+20,14,2019,1,Grand Hotel,Lodging,415.53
+79,14,2019,2,United Airlines,Travel,360.35
+26,14,2019,3,Lyft Ride,Travel,88.82
+99,14,2019,4,Panera Bread,Dining,175.5
+58,14,2019,5,Marriott,Lodging,948.78
+4,14,2019,6,Uber Ride,Travel,165.78
+70,14,2019,7, Flat Tire,Other,103.06
+88,14,2019,8,Olive Garden,Dining,234.05
+99,14,2019,9,Driving Range,Other,109.92
+12,14,2019,10,Ruth's Chris Steak House,Dining,235.69
+90,14,2019,11,Taxi Service,Travel,129.55
+94,14,2019,12,The Cheesecake Factory,Dining,127.39
+44,14,2019,13,American Airlines,Travel,214.03
+27,14,2019,14,Ruth's Chris Steak House,Dining,130.92
+41,15,2019,1,Cinema,Other,78.43
+3,15,2019,2,Olive Garden,Dining,108.48
+55,15,2019,3,Burger King,Dining,68.7
+35,15,2019,4,Olive Garden,Dining,124.58
+94,15,2019,5,United Airlines,Travel,203.41
+3,15,2019,6,Office Depot,Other,193.16
+1,16,2019,1,Holiday Inn,Lodging,975.31
+65,16,2019,2,The Capital Grille,Dining,114.98
+46,16,2019,3,American Airlines,Travel,159.76
+96,16,2019,4,Uber Ride,Travel,157.25
+6,16,2019,5, Flat Tire,Other,145.9
+97,16,2019,6,Driving Range,Other,177.05
+100,16,2019,7,Housecleaning Fee,Incidental,325.59
+10,16,2019,8,Office Depot,Other,203.16
+19,17,2019,1,Uber Ride,Travel,62.67
+13,17,2019,2,Taxi Service,Travel,124.02
+87,17,2019,3,Lyft Ride,Travel,62.7
+77,17,2019,4,The Capital Grille,Dining,210.21
+19,17,2019,5,Office Depot,Other,15.19
+5,17,2019,6,Sheraton,Lodging,322.56
+27,17,2019,7, Flat Tire,Other,79.96
+76,17,2019,8,The Capital Grille,Dining,290.9
+63,17,2019,9,Olive Garden,Dining,220.53
+3,17,2019,10,JetBlue Airways,Travel,438.6
+37,17,2019,11,MedCheck,Incidental,240.72
+80,17,2019,12,Southwest Airlines,Travel,268.29
+39,17,2019,13,Uber Ride,Travel,166.23
+73,17,2019,14,Office Depot,Other,68.05
+74,18,2019,1,The Capital Grille,Dining,158.16
+70,18,2019,2,JetBlue Airways,Travel,468.04
+40,18,2019,3,Sheraton,Lodging,809.95
+19,18,2019,4,Parking Ticket,Incidental,299.67
+69,18,2019,5,Lyft Ride,Travel,114.84
+73,18,2019,6,Panera Bread,Dining,245.42
+88,18,2019,7,Ruth's Chris Steak House,Dining,274.67
+27,18,2019,8,Uber Ride,Travel,89.52
+48,19,2019,1,Cinema,Other,159.98
+5,19,2019,2,Housecleaning Fee,Incidental,46.47
+73,19,2019,3,Golf Trip,Other,120.57
+64,19,2019,4,Burger King,Dining,47.2
+31,19,2019,5,Delta Airlines,Travel,249.38
+8,19,2019,6,Office Depot,Other,160.36
+95,19,2019,7,Starbucks,Dining,43.67
+52,20,2019,1,Olive Garden,Dining,120.31
+12,20,2019,2,Grand Hotel,Lodging,711.89
+57,20,2019,3,Southwest Airlines,Travel,271.72
+90,20,2019,4,Marriott,Lodging,673.06
+87,20,2019,5,Olive Garden,Dining,248.35
+62,20,2019,6,Driving Range,Other,73.04
+53,20,2019,7,Parking Ticket,Incidental,176.56
+1,20,2019,8,Delta Airlines,Travel,107.11
+46,20,2019,9,Cinema,Other,21.85
+26,20,2019,10,The Cheesecake Factory,Dining,177.27
+93,20,2019,11,United Airlines,Travel,248.66
+72,20,2019,12,Ruth's Chris Steak House,Dining,181.93
+30,20,2019,13,United Airlines,Travel,339.19
+27,20,2019,14,Panera Bread,Dining,150.31
+18,1,2020,1,Marriott,Lodging,619.6
+66,1,2020,2,Cinema,Other,159.05
+90,1,2020,3,Office Depot,Other,137.4
+24,1,2020,4,Burger King,Dining,56.58
+4,1,2020,5,Office Depot,Other,118.59
+43,1,2020,6,Ruth's Chris Steak House,Dining,189.56
+13,1,2020,7,Olive Garden,Dining,118.98
+44,1,2020,8,Lyft Ride,Travel,59.62
+20,1,2020,9,Southwest Airlines,Travel,163.05
+20,2,2020,1,Uber Ride,Travel,118.19
+15,2,2020,2, Flat Tire,Other,230.77
+73,2,2020,3,Marriott,Lodging,611.84
+33,2,2020,4,Olive Garden,Dining,121.64
+69,2,2020,5,Olive Garden,Dining,178.32
+98,2,2020,6,The Cheesecake Factory,Dining,163.04
+95,2,2020,7,Office Depot,Other,68.25
+11,2,2020,8,MedCheck,Incidental,55.04
+73,2,2020,9,Parking Ticket,Incidental,235.24
+31,2,2020,10,The Cheesecake Factory,Dining,237.74
+80,3,2020,1,Olive Garden,Dining,197.54
+72,3,2020,2,Ruth's Chris Steak House,Dining,115.14
+81,3,2020,3,Marriott,Lodging,344.77
+57,3,2020,4,Burger King,Dining,12.52
+33,3,2020,5,Lyft Ride,Travel,116.9
+2,3,2020,6,Delta Airlines,Travel,364.62
+10,3,2020,7,Panera Bread,Dining,292.47
+58,3,2020,8,Olive Garden,Dining,136.29
+69,4,2020,1,MedCheck,Incidental,416.47
+96,4,2020,2,Driving Range,Other,70.59
+2,4,2020,3,Holiday Inn,Lodging,871.96
+71,4,2020,4,Marriott,Lodging,657.87
+35,4,2020,5,Uber Ride,Travel,110.32
+45,4,2020,6,Taxi Service,Travel,53.09
+45,4,2020,7,Burger King,Dining,46.77
+93,4,2020,8,Hilton Downtown,Lodging,398.87
+6,4,2020,9,United Airlines,Travel,324.9
+1,4,2020,10,United Airlines,Travel,296.78
+85,4,2020,11,Marriott,Lodging,670.67
+12,4,2020,12, Flat Tire,Other,203.25
+5,5,2020,1,Lyft Ride,Travel,100.97
+26,5,2020,2,Holiday Inn,Lodging,319.36
+89,5,2020,3,The Cheesecake Factory,Dining,117.35
+92,5,2020,4,Cinema,Other,247.1
+6,5,2020,5,Panera Bread,Dining,249.64
+70,5,2020,6,MedCheck,Incidental,35.13
+10,5,2020,7,United Airlines,Travel,172.37
+14,5,2020,8,Olive Garden,Dining,197.45
+54,5,2020,9,United Airlines,Travel,207.98
+78,5,2020,10,Burger King,Dining,26.59
+72,5,2020,11,The Cheesecake Factory,Dining,266.48
+56,5,2020,12,Driving Range,Other,248.8
+7,5,2020,13,Starbucks,Dining,42.05
+59,5,2020,14,JetBlue Airways,Travel,453.77
+4,6,2020,1,Panera Bread,Dining,223.68
+44,6,2020,2,Olive Garden,Dining,126.58
+76,6,2020,3,Driving Range,Other,175.8
+96,6,2020,4,American Airlines,Travel,331.65
+71,6,2020,5,Grand Hotel,Lodging,358.1
+99,7,2020,1, Flat Tire,Other,154.72
+74,7,2020,2,Southwest Airlines,Travel,314.26
+9,7,2020,3,Starbucks,Dining,23.18
+9,7,2020,4,Housecleaning Fee,Incidental,74.1
+39,7,2020,5,Grand Hotel,Lodging,803.99
+86,7,2020,6,Hilton Downtown,Lodging,540.73
+75,7,2020,7,United Airlines,Travel,143.25
+11,7,2020,8,Delta Airlines,Travel,362.49
+93,7,2020,9,Lyft Ride,Travel,93.17
+55,8,2020,1,Grand Hotel,Lodging,416.41
+99,8,2020,2,Panera Bread,Dining,292.9
+25,8,2020,3,Delta Airlines,Travel,303.75
+48,8,2020,4,Taxi Service,Travel,138.49
+62,8,2020,5, Flat Tire,Other,191.4
+73,8,2020,6,Housecleaning Fee,Incidental,106.16
+63,8,2020,7,Hilton Downtown,Lodging,582.52
+86,8,2020,8,Lyft Ride,Travel,158.07
+53,8,2020,9,Delta Airlines,Travel,264.74
+73,8,2020,10, Flat Tire,Other,48.6
+29,8,2020,11,Southwest Airlines,Travel,309.38
+69,9,2020,1,Golf Trip,Other,57.81
+74,9,2020,2,Southwest Airlines,Travel,465.19
+84,9,2020,3,Lyft Ride,Travel,115.75
+18,9,2020,4,Sheraton,Lodging,805.84
+80,9,2020,5,Cinema,Other,237.57
+17,9,2020,6,Housecleaning Fee,Incidental,226.22
+12,9,2020,7,Olive Garden,Dining,184.43
+99,9,2020,8,The Cheesecake Factory,Dining,194.24
+35,10,2020,1,Office Depot,Other,60.83
+90,10,2020,2,Cinema,Other,123.61
+69,10,2020,3,Ruth's Chris Steak House,Dining,168.7
+28,10,2020,4,Holiday Inn,Lodging,478.63
+64,10,2020,5,Panera Bread,Dining,186.01
+5,10,2020,6,Office Depot,Other,39.14
+4,10,2020,7,Burger King,Dining,71.69
+35,10,2020,8,The Capital Grille,Dining,105.87
+77,10,2020,9,Driving Range,Other,177.46
+23,10,2020,10,The Cheesecake Factory,Dining,139.53
+68,10,2020,11,Marriott,Lodging,974.37
+49,10,2020,12,Grand Hotel,Lodging,447.36
+85,11,2020,1,The Capital Grille,Dining,244.96
+72,11,2020,2,Grand Hotel,Lodging,505.15
+45,11,2020,3,Lyft Ride,Travel,179.26
+23,11,2020,4,JetBlue Airways,Travel,163.37
+17,11,2020,5,Southwest Airlines,Travel,118.15
+68,12,2020,1,Lyft Ride,Travel,93.79
+29,12,2020,2,Olive Garden,Dining,106.88
+85,12,2020,3,Taxi Service,Travel,177.02
+76,12,2020,4,Grand Hotel,Lodging,873.03
+73,12,2020,5,JetBlue Airways,Travel,290.17
+76,12,2020,6,Olive Garden,Dining,103.83
+44,12,2020,7,Marriott,Lodging,481.68
+78,12,2020,8,Southwest Airlines,Travel,323.53
+41,12,2020,9,The Capital Grille,Dining,174.13
+7,12,2020,10,Holiday Inn,Lodging,702.67
+32,12,2020,11,American Airlines,Travel,266.15
+96,12,2020,12, Flat Tire,Other,179.0
+70,12,2020,13,Golf Trip,Other,120.52
+62,12,2020,14,Uber Ride,Travel,145.43
+95,12,2020,15,Office Depot,Other,108.1
+16,13,2020,1,Holiday Inn,Lodging,416.27
+87,13,2020,2,Burger King,Dining,30.51
+3,13,2020,3,Panera Bread,Dining,289.72
+4,13,2020,4,Southwest Airlines,Travel,396.7
+50,13,2020,5,MedCheck,Incidental,200.56
+1,13,2020,6,Hilton Downtown,Lodging,703.03
+9,13,2020,7,Office Depot,Other,123.37
+6,13,2020,8,Driving Range,Other,183.82
+71,14,2020,1, Flat Tire,Other,81.21
+42,14,2020,2,Delta Airlines,Travel,332.76
+36,14,2020,3,Panera Bread,Dining,288.96
+36,14,2020,4,Marriott,Lodging,859.1
+65,14,2020,5,Southwest Airlines,Travel,163.54
+57,14,2020,6, Flat Tire,Other,205.17
+15,14,2020,7,Office Depot,Other,213.43
+74,14,2020,8,Cinema,Other,94.59
+57,14,2020,9,Burger King,Dining,79.99
+48,14,2020,10,MedCheck,Incidental,316.93
+35,14,2020,11,Burger King,Dining,60.9
+85,14,2020,12,Golf Trip,Other,176.83
+76,14,2020,13,Lyft Ride,Travel,157.03
+58,15,2020,1,Lyft Ride,Travel,80.63
+52,15,2020,2,Cinema,Other,128.02
+50,15,2020,3,Olive Garden,Dining,233.0
+52,15,2020,4,Uber Ride,Travel,199.24
+2,15,2020,5,Holiday Inn,Lodging,334.68
+3,15,2020,6, Flat Tire,Other,213.52
+9,15,2020,7,Starbucks,Dining,48.0
+30,15,2020,8,Grand Hotel,Lodging,595.11
+16,15,2020,9,Parking Ticket,Incidental,143.36
+62,15,2020,10,Lyft Ride,Travel,152.69
+84,15,2020,11,Sheraton,Lodging,495.9
+100,15,2020,12,Parking Ticket,Incidental,49.41
+30,15,2020,13,JetBlue Airways,Travel,126.66
+82,15,2020,14,Olive Garden,Dining,190.26
+35,16,2020,1,Sheraton,Lodging,330.89
+52,16,2020,2,MedCheck,Incidental,469.14
+42,16,2020,3,Southwest Airlines,Travel,383.36
+76,16,2020,4,Holiday Inn,Lodging,688.17
+45,16,2020,5,Hilton Downtown,Lodging,332.74
+15,16,2020,6, Flat Tire,Other,124.64
+81,17,2020,1,Delta Airlines,Travel,130.21
+61,17,2020,2,Driving Range,Other,102.9
+15,17,2020,3,Cinema,Other,118.3
+92,17,2020,4,Housecleaning Fee,Incidental,216.84
+97,17,2020,5,Ruth's Chris Steak House,Dining,245.72
+59,18,2020,1,Panera Bread,Dining,236.96
+88,18,2020,2,MedCheck,Incidental,87.58
+5,18,2020,3,Southwest Airlines,Travel,282.1
+60,18,2020,4,JetBlue Airways,Travel,304.99
+48,18,2020,5,United Airlines,Travel,358.83
+51,18,2020,6,United Airlines,Travel,173.0
+2,18,2020,7,MedCheck,Incidental,422.62
+88,19,2020,1,Holiday Inn,Lodging,658.91
+54,19,2020,2,Southwest Airlines,Travel,325.06
+56,19,2020,3,Burger King,Dining,52.51
+74,19,2020,4,Burger King,Dining,16.52
+53,19,2020,5,The Cheesecake Factory,Dining,113.11
+20,19,2020,6,The Capital Grille,Dining,129.66
+50,19,2020,7,Uber Ride,Travel,130.3
+7,19,2020,8,Ruth's Chris Steak House,Dining,274.03
+8,19,2020,9,Uber Ride,Travel,57.67
+20,19,2020,10,Burger King,Dining,10.58
+14,20,2020,1,Southwest Airlines,Travel,148.53
+18,20,2020,2,Sheraton,Lodging,980.54
+84,20,2020,3,United Airlines,Travel,100.73
+81,20,2020,4,Sheraton,Lodging,411.76
+19,20,2020,5,Ruth's Chris Steak House,Dining,291.31
+93,20,2020,6,Uber Ride,Travel,155.09
+29,20,2020,7,The Capital Grille,Dining,223.92
+93,20,2020,8,Holiday Inn,Lodging,632.28
+3,20,2020,9,Southwest Airlines,Travel,361.76
+77,1,2021,1,Grand Hotel,Lodging,676.27
+34,1,2021,2,Panera Bread,Dining,157.25
+31,1,2021,3,Golf Trip,Other,168.03
+22,1,2021,4,Olive Garden,Dining,110.73
+27,1,2021,5,MedCheck,Incidental,369.52
+45,1,2021,6,United Airlines,Travel,148.73
+95,1,2021,7,The Capital Grille,Dining,100.34
+31,1,2021,8,Marriott,Lodging,801.15
+35,1,2021,9,Grand Hotel,Lodging,788.91
+82,1,2021,10,Uber Ride,Travel,116.85
+79,1,2021,11,Holiday Inn,Lodging,349.95
+88,1,2021,12,Holiday Inn,Lodging,528.47
+97,1,2021,13,Taxi Service,Travel,80.29
+92,1,2021,14,Office Depot,Other,33.71
+16,2,2021,1,Olive Garden,Dining,188.63
+100,2,2021,2,The Capital Grille,Dining,245.86
+40,2,2021,3,American Airlines,Travel,195.24
+79,2,2021,4,Hilton Downtown,Lodging,848.06
+38,2,2021,5,Marriott,Lodging,443.04
+99,2,2021,6,Office Depot,Other,156.54
+55,2,2021,7,Parking Ticket,Incidental,215.14
+27,2,2021,8,Driving Range,Other,124.29
+85,2,2021,9,Burger King,Dining,42.11
+90,2,2021,10,Holiday Inn,Lodging,991.87
+8,2,2021,11,American Airlines,Travel,399.88
+38,2,2021,12,Golf Trip,Other,11.84
+87,2,2021,13,Grand Hotel,Lodging,998.42
+32,3,2021,1,Delta Airlines,Travel,401.77
+47,3,2021,2,Delta Airlines,Travel,232.46
+18,3,2021,3,Grand Hotel,Lodging,974.12
+30,3,2021,4,Delta Airlines,Travel,251.18
+32,3,2021,5,Cinema,Other,22.63
+17,3,2021,6,Taxi Service,Travel,194.57
+54,3,2021,7,JetBlue Airways,Travel,329.21
+73,3,2021,8,Olive Garden,Dining,181.7
+39,3,2021,9,Uber Ride,Travel,177.5
+63,4,2021,1,United Airlines,Travel,406.52
+45,4,2021,2,Burger King,Dining,52.15
+44,4,2021,3,Delta Airlines,Travel,300.05
+74,4,2021,4,Marriott,Lodging,709.33
+38,4,2021,5,Ruth's Chris Steak House,Dining,123.63
+16,4,2021,6,The Cheesecake Factory,Dining,132.98
+16,4,2021,7,Office Depot,Other,225.48
+13,4,2021,8,American Airlines,Travel,404.06
+54,4,2021,9,Sheraton,Lodging,434.4
+21,4,2021,10,Delta Airlines,Travel,213.14
+99,4,2021,11,Olive Garden,Dining,214.13
+48,5,2021,1,Hilton Downtown,Lodging,832.93
+50,5,2021,2,The Capital Grille,Dining,247.86
+56,5,2021,3,Office Depot,Other,29.64
+42,5,2021,4,Delta Airlines,Travel,104.59
+27,5,2021,5,Olive Garden,Dining,268.61
+62,6,2021,1,United Airlines,Travel,236.67
+77,6,2021,2,Hilton Downtown,Lodging,654.67
+45,6,2021,3,MedCheck,Incidental,276.5
+57,6,2021,4,The Cheesecake Factory,Dining,106.58
+21,6,2021,5,Grand Hotel,Lodging,882.64
+13,6,2021,6,Taxi Service,Travel,82.07
+87,6,2021,7,Sheraton,Lodging,764.68
+44,6,2021,8,Uber Ride,Travel,64.58
+72,6,2021,9,Golf Trip,Other,138.29
+29,7,2021,1,JetBlue Airways,Travel,386.11
+44,7,2021,2,Burger King,Dining,52.22
+85,7,2021,3,Office Depot,Other,101.15
+24,7,2021,4,Office Depot,Other,163.53
+83,7,2021,5,The Cheesecake Factory,Dining,105.17
+95,7,2021,6,MedCheck,Incidental,320.27
+92,7,2021,7,Uber Ride,Travel,177.13
+90,7,2021,8,Sheraton,Lodging,506.33
+66,7,2021,9,Burger King,Dining,63.82
+2,7,2021,10,The Cheesecake Factory,Dining,160.59
+62,8,2021,1,Driving Range,Other,41.66
+65,8,2021,2,Burger King,Dining,28.11
+94,8,2021,3,United Airlines,Travel,259.49
+36,8,2021,4,Parking Ticket,Incidental,430.85
+78,8,2021,5,The Capital Grille,Dining,174.84
+80,8,2021,6,Grand Hotel,Lodging,631.14
+3,8,2021,7,Southwest Airlines,Travel,129.13
+7,8,2021,8,Marriott,Lodging,728.14
+90,8,2021,9,Housecleaning Fee,Incidental,60.99
+92,8,2021,10,JetBlue Airways,Travel,197.71
+24,8,2021,11,Lyft Ride,Travel,95.0
+19,8,2021,12,United Airlines,Travel,396.74
+30,9,2021,1,Uber Ride,Travel,120.87
+72,9,2021,2,JetBlue Airways,Travel,252.24
+10,9,2021,3,Grand Hotel,Lodging,460.88
+38,9,2021,4,Grand Hotel,Lodging,537.38
+65,9,2021,5,Hilton Downtown,Lodging,844.78
+74,9,2021,6,Cinema,Other,140.67
+94,9,2021,7,JetBlue Airways,Travel,253.25
+62,9,2021,8,Marriott,Lodging,969.95
+43,9,2021,9,Marriott,Lodging,594.26
+65,9,2021,10,Sheraton,Lodging,327.56
+31,9,2021,11,Starbucks,Dining,63.5
+13,9,2021,12,Ruth's Chris Steak House,Dining,232.25
+24,9,2021,13,Parking Ticket,Incidental,321.93
+23,9,2021,14,Hilton Downtown,Lodging,527.06
+22,9,2021,15,United Airlines,Travel,214.67
+65,10,2021,1,Taxi Service,Travel,56.74
+50,10,2021,2,American Airlines,Travel,181.52
+81,10,2021,3,Office Depot,Other,52.05
+80,10,2021,4,Southwest Airlines,Travel,281.68
+47,10,2021,5,Olive Garden,Dining,110.6
+62,10,2021,6,Grand Hotel,Lodging,646.76
+17,10,2021,7,MedCheck,Incidental,158.64
+47,10,2021,8,Golf Trip,Other,37.53
+28,10,2021,9,Southwest Airlines,Travel,404.29
+90,10,2021,10,Lyft Ride,Travel,171.67
+44,10,2021,11,Housecleaning Fee,Incidental,276.73
+31,10,2021,12,Holiday Inn,Lodging,569.51
+23,10,2021,13,Office Depot,Other,204.22
+6,11,2021,1,Grand Hotel,Lodging,449.45
+54,11,2021,2,Uber Ride,Travel,174.51
+32,11,2021,3,Hilton Downtown,Lodging,458.55
+76,11,2021,4,The Capital Grille,Dining,200.03
+23,11,2021,5,Uber Ride,Travel,111.91
+15,11,2021,6,Burger King,Dining,66.27
+73,11,2021,7,Taxi Service,Travel,96.71
+14,12,2021,1,United Airlines,Travel,309.58
+97,12,2021,2,United Airlines,Travel,484.59
+27,12,2021,3,JetBlue Airways,Travel,338.99
+70,12,2021,4, Flat Tire,Other,81.11
+78,12,2021,5,Southwest Airlines,Travel,112.79
+52,12,2021,6, Flat Tire,Other,18.27
+16,12,2021,7,Grand Hotel,Lodging,867.03
+95,12,2021,8,American Airlines,Travel,467.16
+61,12,2021,9,Driving Range,Other,206.34
+67,13,2021,1,Marriott,Lodging,423.8
+11,13,2021,2,Housecleaning Fee,Incidental,338.0
+87,13,2021,3,Ruth's Chris Steak House,Dining,297.07
+99,13,2021,4,United Airlines,Travel,445.83
+87,13,2021,5,Ruth's Chris Steak House,Dining,103.48
+12,13,2021,6,The Cheesecake Factory,Dining,104.42
+47,13,2021,7,Olive Garden,Dining,147.55
+19,13,2021,8,Delta Airlines,Travel,471.44
+65,13,2021,9,Housecleaning Fee,Incidental,480.11
+31,14,2021,1,The Capital Grille,Dining,229.61
+29,14,2021,2,Parking Ticket,Incidental,212.19
+14,14,2021,3, Flat Tire,Other,29.87
+18,14,2021,4,United Airlines,Travel,199.17
+17,14,2021,5,Southwest Airlines,Travel,443.72
+100,14,2021,6,Marriott,Lodging,413.98
+89,14,2021,7,The Cheesecake Factory,Dining,273.26
+34,15,2021,1, Flat Tire,Other,130.44
+93,15,2021,2,The Capital Grille,Dining,108.02
+100,15,2021,3,Taxi Service,Travel,160.7
+46,15,2021,4,Holiday Inn,Lodging,847.22
+66,15,2021,5,Southwest Airlines,Travel,193.76
+37,16,2021,1,Taxi Service,Travel,70.58
+36,16,2021,2,American Airlines,Travel,108.05
+28,16,2021,3,Parking Ticket,Incidental,52.93
+58,16,2021,4,Grand Hotel,Lodging,819.96
+60,16,2021,5,Delta Airlines,Travel,105.61
+94,16,2021,6, Flat Tire,Other,150.48
+33,16,2021,7,Grand Hotel,Lodging,389.68
+38,16,2021,8,Uber Ride,Travel,194.24
+97,16,2021,9,JetBlue Airways,Travel,151.85
+72,16,2021,10,Uber Ride,Travel,89.97
+99,16,2021,11,Burger King,Dining,76.0
+8,16,2021,12,The Capital Grille,Dining,285.02
+62,16,2021,13,Southwest Airlines,Travel,457.64
+28,17,2021,1,Marriott,Lodging,613.24
+17,17,2021,2,Housecleaning Fee,Incidental,34.18
+58,17,2021,3,United Airlines,Travel,177.37
+76,17,2021,4,The Capital Grille,Dining,234.77
+29,17,2021,5,Parking Ticket,Incidental,192.15
+10,17,2021,6,Southwest Airlines,Travel,395.06
+60,17,2021,7,JetBlue Airways,Travel,225.01
+3,18,2021,1,Grand Hotel,Lodging,649.39
+49,18,2021,2,Housecleaning Fee,Incidental,231.48
+89,18,2021,3,Holiday Inn,Lodging,418.66
+82,18,2021,4,Olive Garden,Dining,194.09
+6,18,2021,5,Starbucks,Dining,35.68
+8,18,2021,6,Grand Hotel,Lodging,852.26
+98,18,2021,7,Uber Ride,Travel,195.56
+38,18,2021,8,United Airlines,Travel,291.1
+3,18,2021,9,Cinema,Other,75.87
+8,18,2021,10,Starbucks,Dining,34.76
+20,18,2021,11,Lyft Ride,Travel,73.89
+96,18,2021,12,Grand Hotel,Lodging,728.08
+48,18,2021,13,Starbucks,Dining,55.62
+87,18,2021,14,Lyft Ride,Travel,127.74
+44,18,2021,15,Marriott,Lodging,908.49
+84,19,2021,1,United Airlines,Travel,464.35
+95,19,2021,2,Marriott,Lodging,475.32
+69,19,2021,3,Uber Ride,Travel,69.12
+53,19,2021,4,Panera Bread,Dining,135.53
+89,19,2021,5,Taxi Service,Travel,182.05
+85,19,2021,6,Southwest Airlines,Travel,458.81
+99,19,2021,7,Sheraton,Lodging,551.63
+93,19,2021,8,Housecleaning Fee,Incidental,451.58
+88,19,2021,9,Parking Ticket,Incidental,379.68
+14,19,2021,10,Starbucks,Dining,23.56
+60,19,2021,11,JetBlue Airways,Travel,337.74
+90,20,2021,1,United Airlines,Travel,155.01
+62,20,2021,2,Grand Hotel,Lodging,761.9
+99,20,2021,3,Office Depot,Other,103.06
+30,20,2021,4,Olive Garden,Dining,121.07
+1,20,2021,5,The Cheesecake Factory,Dining,289.58
+66,20,2021,6,The Capital Grille,Dining,248.96
+27,20,2021,7,Marriott,Lodging,390.14
+79,20,2021,8,Ruth's Chris Steak House,Dining,191.97
+24,1,2022,1,Lyft Ride,Travel,64.87
+96,1,2022,2,Panera Bread,Dining,239.6
+44,1,2022,3,Office Depot,Other,159.02
+14,1,2022,4,Hilton Downtown,Lodging,785.14
+47,1,2022,5,Delta Airlines,Travel,294.57
+30,1,2022,6,Taxi Service,Travel,92.15
+17,1,2022,7,Olive Garden,Dining,281.34
+91,1,2022,8,Uber Ride,Travel,68.08
+90,2,2022,1,JetBlue Airways,Travel,162.92
+11,2,2022,2,Burger King,Dining,59.16
+79,2,2022,3,Grand Hotel,Lodging,787.0
+79,2,2022,4,Delta Airlines,Travel,192.69
+97,2,2022,5,Starbucks,Dining,23.45
+64,2,2022,6,United Airlines,Travel,247.48
+28,2,2022,7,Uber Ride,Travel,139.9
+14,2,2022,8,American Airlines,Travel,155.75
+28,3,2022,1,Cinema,Other,113.31
+68,3,2022,2,Driving Range,Other,72.71
+72,3,2022,3,Cinema,Other,55.91
+33,3,2022,4,Office Depot,Other,51.28
+24,3,2022,5,Burger King,Dining,64.46
+98,4,2022,1,Hilton Downtown,Lodging,957.05
+5,4,2022,2,Uber Ride,Travel,179.39
+34,4,2022,3,United Airlines,Travel,151.24
+51,4,2022,4,Hilton Downtown,Lodging,344.45
+17,4,2022,5,American Airlines,Travel,391.42
+5,4,2022,6,MedCheck,Incidental,17.34
+64,4,2022,7,Hilton Downtown,Lodging,629.73
+10,4,2022,8,Office Depot,Other,28.22
+54,4,2022,9,Ruth's Chris Steak House,Dining,130.78
+96,4,2022,10,MedCheck,Incidental,183.11
+22,5,2022,1,Holiday Inn,Lodging,931.15
+87,5,2022,2,Ruth's Chris Steak House,Dining,142.74
+59,5,2022,3,Marriott,Lodging,934.11
+63,5,2022,4,The Capital Grille,Dining,267.69
+60,5,2022,5,Sheraton,Lodging,989.91
+66,5,2022,6,Marriott,Lodging,970.94
+40,5,2022,7,Holiday Inn,Lodging,919.59
+21,5,2022,8,Starbucks,Dining,54.68
+12,5,2022,9,JetBlue Airways,Travel,145.65
+10,5,2022,10,American Airlines,Travel,238.5
+81,5,2022,11,Grand Hotel,Lodging,557.94
+54,5,2022,12,Cinema,Other,40.37
+15,5,2022,13,Southwest Airlines,Travel,461.07
+24,6,2022,1,Panera Bread,Dining,259.72
+21,6,2022,2,The Cheesecake Factory,Dining,263.2
+92,6,2022,3,The Capital Grille,Dining,144.88
+95,6,2022,4,Parking Ticket,Incidental,266.51
+24,6,2022,5,United Airlines,Travel,420.83
+92,6,2022,6,Hilton Downtown,Lodging,795.55
+86,6,2022,7,Delta Airlines,Travel,459.83
+32,6,2022,8,Hilton Downtown,Lodging,405.26
+62,6,2022,9,Panera Bread,Dining,295.15
+24,6,2022,10,Uber Ride,Travel,198.22
+11,6,2022,11,United Airlines,Travel,172.39
+53,7,2022,1,MedCheck,Incidental,194.46
+61,7,2022,2,Panera Bread,Dining,147.24
+20,7,2022,3,Office Depot,Other,117.32
+27,7,2022,4,Holiday Inn,Lodging,438.12
+67,7,2022,5,United Airlines,Travel,434.45
+81,7,2022,6,Parking Ticket,Incidental,397.15
+32,7,2022,7,The Capital Grille,Dining,105.97
+56,7,2022,8,JetBlue Airways,Travel,247.32
+90,8,2022,1,The Cheesecake Factory,Dining,219.22
+29,8,2022,2,JetBlue Airways,Travel,475.43
+66,8,2022,3,Holiday Inn,Lodging,593.08
+82,8,2022,4,United Airlines,Travel,309.3
+54,8,2022,5,Sheraton,Lodging,653.43
+94,8,2022,6,Office Depot,Other,113.31
+97,8,2022,7,JetBlue Airways,Travel,141.95
+9,9,2022,1,Starbucks,Dining,17.85
+81,9,2022,2,Golf Trip,Other,117.47
+63,9,2022,3,Driving Range,Other,167.53
+84,9,2022,4,MedCheck,Incidental,494.48
+52,9,2022,5,The Capital Grille,Dining,214.2
+68,9,2022,6,Burger King,Dining,65.37
+59,9,2022,7,JetBlue Airways,Travel,327.99
+31,9,2022,8,American Airlines,Travel,349.34
+84,9,2022,9,Grand Hotel,Lodging,609.62
+40,9,2022,10,Hilton Downtown,Lodging,571.57
+57,9,2022,11,Taxi Service,Travel,116.27
+5,10,2022,1,The Cheesecake Factory,Dining,166.59
+53,10,2022,2,Southwest Airlines,Travel,432.58
+99,10,2022,3,Office Depot,Other,184.02
+33,10,2022,4,Housecleaning Fee,Incidental,213.24
+20,10,2022,5,Taxi Service,Travel,188.9
+66,11,2022,1,Golf Trip,Other,161.75
+86,11,2022,2,The Cheesecake Factory,Dining,187.1
+99,11,2022,3, Flat Tire,Other,210.87
+15,11,2022,4,Grand Hotel,Lodging,553.12
+61,11,2022,5, Flat Tire,Other,36.35
+99,11,2022,6,Burger King,Dining,62.51
+74,12,2022,1,Lyft Ride,Travel,90.75
+72,12,2022,2,Parking Ticket,Incidental,152.5
+66,12,2022,3,Hilton Downtown,Lodging,425.68
+86,12,2022,4,Burger King,Dining,34.63
+28,12,2022,5,Golf Trip,Other,63.42
+11,12,2022,6, Flat Tire,Other,80.79
+49,12,2022,7,United Airlines,Travel,241.5
+42,12,2022,8,Ruth's Chris Steak House,Dining,128.87
+84,13,2022,1,Delta Airlines,Travel,392.46
+39,13,2022,2,Grand Hotel,Lodging,836.41
+59,13,2022,3,Southwest Airlines,Travel,233.03
+3,13,2022,4, Flat Tire,Other,214.54
+36,13,2022,5,Uber Ride,Travel,99.24
+4,14,2022,1,Parking Ticket,Incidental,231.67
+29,14,2022,2,American Airlines,Travel,257.22
+63,14,2022,3,Office Depot,Other,133.11
+13,14,2022,4,Taxi Service,Travel,78.5
+79,14,2022,5,Uber Ride,Travel,82.51
+5,14,2022,6,Ruth's Chris Steak House,Dining,130.74
+62,14,2022,7,Olive Garden,Dining,122.02
+24,14,2022,8,Ruth's Chris Steak House,Dining,213.15
+51,14,2022,9,Panera Bread,Dining,139.94
+69,14,2022,10,Holiday Inn,Lodging,512.53
+60,15,2022,1,Golf Trip,Other,159.99
+33,15,2022,2,Burger King,Dining,22.44
+23,15,2022,3,Burger King,Dining,47.2
+52,15,2022,4,The Cheesecake Factory,Dining,208.58
+49,15,2022,5,Parking Ticket,Incidental,494.89
+40,15,2022,6,Uber Ride,Travel,197.32
+16,15,2022,7,Uber Ride,Travel,69.54
+70,15,2022,8,Parking Ticket,Incidental,478.47
+25,15,2022,9,Grand Hotel,Lodging,415.81
+79,15,2022,10,Driving Range,Other,122.62
+77,15,2022,11,Ruth's Chris Steak House,Dining,113.75
+62,15,2022,12,Delta Airlines,Travel,475.67
+58,15,2022,13,Housecleaning Fee,Incidental,220.53
+74,15,2022,14,Olive Garden,Dining,202.19
+78,15,2022,15,JetBlue Airways,Travel,328.14
+19,16,2022,1,Cinema,Other,136.01
+4,16,2022,2,Ruth's Chris Steak House,Dining,273.39
+33,16,2022,3,United Airlines,Travel,192.58
+52,16,2022,4,Burger King,Dining,57.12
+33,16,2022,5,Driving Range,Other,228.93
+81,16,2022,6,Cinema,Other,248.94
+3,16,2022,7,Ruth's Chris Steak House,Dining,171.91
+60,16,2022,8,Olive Garden,Dining,294.76
+5,16,2022,9,Cinema,Other,112.83
+48,16,2022,10,Burger King,Dining,68.28
+81,17,2022,1,Grand Hotel,Lodging,599.45
+4,17,2022,2,JetBlue Airways,Travel,293.04
+87,17,2022,3,Marriott,Lodging,947.61
+24,17,2022,4,Delta Airlines,Travel,115.91
+53,17,2022,5,Delta Airlines,Travel,223.2
+77,17,2022,6,Cinema,Other,11.65
+35,17,2022,7,The Cheesecake Factory,Dining,290.02
+58,17,2022,8,Office Depot,Other,190.63
+22,17,2022,9,Parking Ticket,Incidental,329.47
+100,17,2022,10,Marriott,Lodging,333.66
+96,17,2022,11,The Cheesecake Factory,Dining,129.62
+78,17,2022,12,Panera Bread,Dining,266.59
+12,17,2022,13,The Capital Grille,Dining,229.36
+76,17,2022,14, Flat Tire,Other,218.49
+59,17,2022,15,Starbucks,Dining,28.81
+64,18,2022,1,Hilton Downtown,Lodging,495.19
+100,18,2022,2,Office Depot,Other,43.41
+46,18,2022,3,Starbucks,Dining,28.53
+95,18,2022,4,Uber Ride,Travel,64.22
+18,18,2022,5,JetBlue Airways,Travel,264.61
+62,18,2022,6, Flat Tire,Other,92.2
+25,18,2022,7,Golf Trip,Other,103.52
+20,18,2022,8,Hilton Downtown,Lodging,829.51
+63,18,2022,9,Starbucks,Dining,35.53
+21,18,2022,10,Uber Ride,Travel,131.0
+48,18,2022,11,Lyft Ride,Travel,100.49
+59,19,2022,1,Housecleaning Fee,Incidental,401.45
+53,19,2022,2,Panera Bread,Dining,214.62
+24,19,2022,3, Flat Tire,Other,225.03
+97,19,2022,4,Panera Bread,Dining,213.96
+35,19,2022,5,Driving Range,Other,169.5
+36,19,2022,6,Burger King,Dining,14.9
+84,19,2022,7,Sheraton,Lodging,426.44
+45,19,2022,8,Office Depot,Other,16.76
+69,19,2022,9,Burger King,Dining,22.34
+59,19,2022,10,Parking Ticket,Incidental,390.7
+15,19,2022,11,American Airlines,Travel,109.01
+94,19,2022,12, Flat Tire,Other,248.91
+58,19,2022,13,Ruth's Chris Steak House,Dining,143.59
+51,19,2022,14,Golf Trip,Other,147.18
+61,20,2022,1,Grand Hotel,Lodging,344.59
+54,20,2022,2,The Capital Grille,Dining,207.64
+51,20,2022,3,Housecleaning Fee,Incidental,86.84
+40,20,2022,4,Driving Range,Other,157.03
+59,20,2022,5,Grand Hotel,Lodging,456.42
+6,20,2022,6,Cinema,Other,105.51
+7,1,2023,1,Delta Airlines,Travel,414.2
+48,1,2023,2,Panera Bread,Dining,121.62
+82,1,2023,3,Olive Garden,Dining,299.79
+6,1,2023,4,United Airlines,Travel,200.29
+3,1,2023,5,The Capital Grille,Dining,228.03
+18,1,2023,6,Lyft Ride,Travel,51.47
+96,1,2023,7,Office Depot,Other,66.94
+3,2,2023,1,Office Depot,Other,175.75
+21,2,2023,2,Hilton Downtown,Lodging,913.48
+66,2,2023,3,Marriott,Lodging,506.42
+63,2,2023,4,Taxi Service,Travel,138.61
+98,2,2023,5,Lyft Ride,Travel,180.87
+41,2,2023,6,Office Depot,Other,214.59
+76,3,2023,1, Flat Tire,Other,60.98
+17,3,2023,2,Panera Bread,Dining,133.54
+65,3,2023,3,Golf Trip,Other,54.86
+8,3,2023,4,Marriott,Lodging,948.23
+29,3,2023,5,Parking Ticket,Incidental,194.38
+1,3,2023,6,Sheraton,Lodging,376.43
+23,3,2023,7,Taxi Service,Travel,62.79
+43,3,2023,8,Ruth's Chris Steak House,Dining,227.94
+10,3,2023,9,Marriott,Lodging,861.91
+39,3,2023,10,MedCheck,Incidental,190.57
+16,3,2023,11,Holiday Inn,Lodging,484.89
+50,3,2023,12,Grand Hotel,Lodging,332.86
+74,3,2023,13,Starbucks,Dining,47.82
+34,4,2023,1,Sheraton,Lodging,590.48
+96,4,2023,2,Grand Hotel,Lodging,923.82
+88,4,2023,3,Holiday Inn,Lodging,486.63
+1,4,2023,4,United Airlines,Travel,425.16
+62,4,2023,5,Burger King,Dining,36.3
+14,4,2023,6,Olive Garden,Dining,239.69
+42,4,2023,7,Panera Bread,Dining,214.53
+6,4,2023,8,Taxi Service,Travel,57.77
+40,4,2023,9,Ruth's Chris Steak House,Dining,145.67
+96,4,2023,10,Starbucks,Dining,74.75
+65,4,2023,11,Ruth's Chris Steak House,Dining,240.4
+49,5,2023,1,American Airlines,Travel,447.44
+72,5,2023,2,Taxi Service,Travel,191.67
+82,5,2023,3,Housecleaning Fee,Incidental,87.01
+69,5,2023,4,American Airlines,Travel,384.6
+76,5,2023,5,The Cheesecake Factory,Dining,209.79
+89,5,2023,6,Golf Trip,Other,28.41
+25,5,2023,7,Olive Garden,Dining,289.36
+44,5,2023,8,JetBlue Airways,Travel,180.31
+35,5,2023,9,The Cheesecake Factory,Dining,110.07
+84,5,2023,10,Delta Airlines,Travel,212.52
+36,5,2023,11,Hilton Downtown,Lodging,540.35
+87,6,2023,1,Parking Ticket,Incidental,367.29
+92,6,2023,2,Driving Range,Other,189.55
+23,6,2023,3,MedCheck,Incidental,237.92
+63,6,2023,4,Grand Hotel,Lodging,412.65
+21,6,2023,5,Hilton Downtown,Lodging,829.77
+24,6,2023,6,Holiday Inn,Lodging,386.56
+16,6,2023,7,Golf Trip,Other,27.58
+63,7,2023,1,Marriott,Lodging,375.65
+80,7,2023,2,Lyft Ride,Travel,179.94
+93,7,2023,3,Taxi Service,Travel,189.43
+50,7,2023,4,Ruth's Chris Steak House,Dining,192.86
+55,7,2023,5,Panera Bread,Dining,171.84
+79,7,2023,6,Housecleaning Fee,Incidental,231.72
+68,7,2023,7,JetBlue Airways,Travel,373.41
+44,7,2023,8,The Capital Grille,Dining,266.87
+98,7,2023,9,Taxi Service,Travel,161.72
+39,7,2023,10,Panera Bread,Dining,116.28
+8,7,2023,11,Grand Hotel,Lodging,755.18
+80,7,2023,12, Flat Tire,Other,247.94
+35,7,2023,13,Ruth's Chris Steak House,Dining,196.95
+74,7,2023,14, Flat Tire,Other,153.0
+10,7,2023,15,MedCheck,Incidental,102.22
+25,8,2023,1,Panera Bread,Dining,181.91
+53,8,2023,2,Lyft Ride,Travel,153.14
+17,8,2023,3,Uber Ride,Travel,114.06
+11,8,2023,4,Housecleaning Fee,Incidental,308.73
+46,8,2023,5,Cinema,Other,184.74
+61,8,2023,6,Marriott,Lodging,451.98
+94,8,2023,7, Flat Tire,Other,185.41
+31,8,2023,8,Uber Ride,Travel,73.04
+54,8,2023,9,Hilton Downtown,Lodging,660.92
+71,8,2023,10,JetBlue Airways,Travel,179.62
+100,8,2023,11,Panera Bread,Dining,289.49
+48,8,2023,12,Office Depot,Other,162.23
+44,9,2023,1,Driving Range,Other,55.01
+14,9,2023,2,Ruth's Chris Steak House,Dining,119.03
+45,9,2023,3,Taxi Service,Travel,108.41
+44,9,2023,4,Panera Bread,Dining,274.54
+50,9,2023,5,Parking Ticket,Incidental,288.09
+35,9,2023,6,Housecleaning Fee,Incidental,386.5
+54,9,2023,7,JetBlue Airways,Travel,341.11
+82,9,2023,8, Flat Tire,Other,236.25
+30,9,2023,9,Taxi Service,Travel,88.64
+3,9,2023,10,United Airlines,Travel,305.44
+94,9,2023,11,Panera Bread,Dining,144.93
+50,9,2023,12,Delta Airlines,Travel,436.37
+91,9,2023,13,Parking Ticket,Incidental,360.55
+60,9,2023,14,Lyft Ride,Travel,160.06
+55,10,2023,1,Cinema,Other,108.6
+8,10,2023,2,Cinema,Other,147.37
+100,10,2023,3,Housecleaning Fee,Incidental,381.9
+20,10,2023,4,Hilton Downtown,Lodging,502.09
+95,10,2023,5,Starbucks,Dining,12.57
+19,10,2023,6,Taxi Service,Travel,192.71
+41,11,2023,1,American Airlines,Travel,216.35
+75,11,2023,2,Marriott,Lodging,709.94
+88,11,2023,3,MedCheck,Incidental,307.17
+48,11,2023,4,Starbucks,Dining,29.54
+47,11,2023,5,United Airlines,Travel,441.8
+77,11,2023,6,Sheraton,Lodging,557.74
+35,11,2023,7,Taxi Service,Travel,188.93
+80,11,2023,8,Marriott,Lodging,500.35
+29,11,2023,9,The Cheesecake Factory,Dining,128.56
+63,11,2023,10,Marriott,Lodging,317.96
+14,11,2023,11,American Airlines,Travel,193.42
+13,12,2023,1,Holiday Inn,Lodging,518.69
+56,12,2023,2,MedCheck,Incidental,324.21
+36,12,2023,3,Sheraton,Lodging,847.19
+75,12,2023,4,Marriott,Lodging,579.89
+7,12,2023,5,Delta Airlines,Travel,205.83
+74,12,2023,6,Uber Ride,Travel,137.61
+20,12,2023,7,The Cheesecake Factory,Dining,261.72
+9,12,2023,8,Burger King,Dining,19.99
+58,12,2023,9, Flat Tire,Other,31.43
+41,12,2023,10,Sheraton,Lodging,919.52
+60,12,2023,11,Uber Ride,Travel,52.75
+44,12,2023,12,Ruth's Chris Steak House,Dining,141.12
+88,12,2023,13, Flat Tire,Other,63.56
+48,12,2023,14,Holiday Inn,Lodging,604.36
+64,13,2023,1,Uber Ride,Travel,54.21
+65,13,2023,2,Panera Bread,Dining,183.94
+45,13,2023,3,Sheraton,Lodging,915.7
+54,13,2023,4,Grand Hotel,Lodging,733.56
+93,13,2023,5,United Airlines,Travel,326.17
+36,13,2023,6,Golf Trip,Other,242.49
+30,13,2023,7,Starbucks,Dining,16.47
+13,13,2023,8,Cinema,Other,112.72
+21,14,2023,1,Sheraton,Lodging,780.28
+6,14,2023,2,Holiday Inn,Lodging,361.79
+91,14,2023,3,Taxi Service,Travel,124.15
+18,14,2023,4,Olive Garden,Dining,226.11
+1,14,2023,5,Starbucks,Dining,77.29
+9,14,2023,6,United Airlines,Travel,100.43
+87,14,2023,7,Parking Ticket,Incidental,323.54
+80,14,2023,8,Uber Ride,Travel,50.35
+34,14,2023,9,Southwest Airlines,Travel,310.03
+82,14,2023,10,Starbucks,Dining,40.24
+49,15,2023,1,Burger King,Dining,73.73
+94,15,2023,2,Panera Bread,Dining,122.33
+100,15,2023,3,Sheraton,Lodging,630.68
+33,15,2023,4,Burger King,Dining,43.51
+13,15,2023,5,The Cheesecake Factory,Dining,139.17
+96,15,2023,6, Flat Tire,Other,182.97
+54,15,2023,7,JetBlue Airways,Travel,415.17
+83,15,2023,8,Sheraton,Lodging,574.24
+68,15,2023,9,American Airlines,Travel,163.67
+38,15,2023,10,Uber Ride,Travel,158.91
+13,16,2023,1,Delta Airlines,Travel,278.07
+6,16,2023,2,Golf Trip,Other,188.96
+29,16,2023,3,Ruth's Chris Steak House,Dining,282.92
+12,16,2023,4,Sheraton,Lodging,589.6
+2,16,2023,5,The Capital Grille,Dining,267.08
+24,16,2023,6,Delta Airlines,Travel,487.47
+66,16,2023,7,The Capital Grille,Dining,126.97
+41,16,2023,8,Grand Hotel,Lodging,569.27
+28,16,2023,9,Burger King,Dining,54.34
+40,17,2023,1, Flat Tire,Other,34.5
+11,17,2023,2,Starbucks,Dining,68.2
+63,17,2023,3,The Cheesecake Factory,Dining,204.36
+38,17,2023,4,Housecleaning Fee,Incidental,75.59
+32,17,2023,5,Olive Garden,Dining,282.59
+70,17,2023,6,Southwest Airlines,Travel,411.05
+22,17,2023,7,MedCheck,Incidental,130.96
+81,17,2023,8,Sheraton,Lodging,389.93
+36,18,2023,1,Office Depot,Other,65.06
+70,18,2023,2,Burger King,Dining,77.85
+37,18,2023,3,Cinema,Other,165.41
+25,18,2023,4,American Airlines,Travel,366.28
+32,18,2023,5,Burger King,Dining,58.45
+52,18,2023,6,Driving Range,Other,223.62
+3,18,2023,7,Grand Hotel,Lodging,515.51
+37,19,2023,1,Hilton Downtown,Lodging,930.24
+24,19,2023,2,Holiday Inn,Lodging,966.24
+25,19,2023,3, Flat Tire,Other,232.86
+2,19,2023,4,MedCheck,Incidental,138.53
+94,19,2023,5,Ruth's Chris Steak House,Dining,195.61
+5,19,2023,6,Sheraton,Lodging,408.21
+10,19,2023,7,American Airlines,Travel,260.35
+77,19,2023,8,Parking Ticket,Incidental,52.29
+54,20,2023,1,Marriott,Lodging,515.57
+100,20,2023,2,Uber Ride,Travel,99.27
+20,20,2023,3,Cinema,Other,136.64
+11,20,2023,4,Burger King,Dining,17.98
+52,20,2023,5,Grand Hotel,Lodging,675.92
+61,20,2023,6,Olive Garden,Dining,126.67
+42,20,2023,7,Starbucks,Dining,69.06
+81,20,2023,8,The Capital Grille,Dining,196.63
+22,20,2023,9,Cinema,Other,187.82
+98,20,2023,10,Marriott,Lodging,909.84
+93,20,2023,11,Driving Range,Other,196.78
+54,20,2023,12,JetBlue Airways,Travel,339.24
+33,20,2023,13,Starbucks,Dining,66.22
+12,20,2023,14,United Airlines,Travel,340.39
+28,20,2023,15,Starbucks,Dining,26.62

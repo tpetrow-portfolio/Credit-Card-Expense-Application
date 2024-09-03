@@ -165,7 +165,6 @@ def chargeTable_by_year(userYear):
   
   print(employeeTable)  # print table
 
-
 ###################################
 # Main Menu UI of program
 def main():

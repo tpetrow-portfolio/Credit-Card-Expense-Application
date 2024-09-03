@@ -139,4 +139,129 @@ def tripReport(userYear, userTrip):
   
   plt.show()  # display the entire figure
 
-# tripReport(2019,2)  # test function
+
+# function will formulate summary report from user input year
+def chargeTable_by_trip(userYear, userTrip):
+  # convert user input to integer
+  userYear = int(userYear)
+  userTrip = int(userTrip)
+
+  all_trip_charges = expendituresDF[(expendituresDF['Trip ID'] == userTrip) &    # filter expenditures for the user-selected trip and year
+                    (expendituresDF['Year'] == userYear)].sort_values(by = 'Expense Category')
+  all_trip_charges = all_trip_charges.reset_index(drop=True)  # drop the index column, not needed in table
+  headerList = ['Employee ID','Trip ID','Trip Year','Charge Number', 'Expense Name', 'Expense Category', "Price"]  # create list of column headers for table
+  employeeTable = tabulate(all_trip_charges, headers=headerList, tablefmt='fancy_grid', showindex=False)  # create table of charges from user-selected trip and year
+  
+  print(employeeTable)  # print table
+
+
+def chargeTable_by_year(userYear):
+  # convert user input to integer
+  userYear = int(userYear)
+
+  year_expenditure_data = pd.DataFrame(expendituresDF[expendituresDF['Year'] == userYear])  # total expenditure data filtered out from expendituresDF
+  headerList = ['Employee ID','Trip ID','Trip Year','Charge Number', 'Expense Name', 'Expense Category', "Price"]  # create list of column headers for table
+  employeeTable = tabulate(year_expenditure_data, headers=headerList, tablefmt='fancy_grid', showindex=False)  # create table of charges from user-selected trip and year
+  
+  print(employeeTable)  # print table
+
+
+###################################
+# Main Menu UI of program
+def main():
+  mainSelect = "1"
+  while mainSelect != "0":
+    os.system('cls')  # clear screen
+    print("Sample Co.'s Company Credit Card Expenditure Reporting and Forecasting Application")
+    print("----------------------------------------------------------------------------------")
+    print("1) Enter Year Number (2019-2023)")
+    print("2) 5-year Summary Reporting")
+    print("3) Forecast Data")
+    print("4) About the Application")
+    print("0) Exit")
+    print("=================================")
+    print("")
+    mainSelect = input("Enter Selection: ")
+
+    # if user selects a year to generate reports on
+    if mainSelect in ['2019','2020','2021','2022','2023']:
+      innerSelect = 1
+      while innerSelect != 0:
+        os.system('cls')
+        print("Sample Co.'s Company Credit Card Expenditure Reporting and Forecasting Application")
+        print("----------------------------------------------------------------------------------")
+        print("Enter Trip Number (1-20)")
+        print("  -OR-")
+        print("Enter (s) for a summary of " + mainSelect)
+        print("  -OR-")
+        print("Enter 0 to return to main menu")
+        print("=================================")
+        print("")
+        innerSelect = input("Enter Selection: ")
+        if innerSelect in ('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'):  # if user selects trip number 1-20
+          tripReport(mainSelect, innerSelect)  # call tripReport function to generate charts for user-selected trip from user-selected year
+          print("")
+          chargeTableDisplay = input("Would you like to see a breakdown of all charges for trip # " + innerSelect + "? (Y/N): ")
+          if chargeTableDisplay in ('Y','y'):
+            os.system('cls')
+            chargeTable_by_trip(mainSelect,innerSelect)  # call chargeTable_by_trip function to print a chart of all charges for the user-selected trip from user-selected year, organized by expense category
+            print("")
+            input("Press ENTER to return to main menu....")
+            break
+        elif innerSelect in ('s','S'):  # if user selects 's' for summary
+          os.system('cls')
+          yearReport(mainSelect)  # call yearReport function to generate summary charts for user-selected year
+          chargeTableDisplay = input("Would you like to see a breakdown of all charges for " + mainSelect + "? (Y/N): ")
+          if chargeTableDisplay in ('Y','y'):
+            os.system('cls')
+            chargeTable_by_year(mainSelect)  # call chargeTable_by_year function to print a chart of all charges from user-selected year, organized by trip number
+            print("")
+            input("Press ENTER to return to main menu....")
+            break
+        elif innerSelect == "0":  # if user selects 0 to return to main menu
+          break
+        else:
+          print("Invalid Selection")
+          print(" ")
+
+    # if user selects 2) 5-year Summary Reporting
+    elif mainSelect == "2":
+      print("5-year Summary Reporting")
+
+    # if user selects 3) Forecast Data
+    elif mainSelect == "3":
+      print("Forecast Data")
+
+    # if user selects 4) About the Application
+    elif mainSelect == "4":
+      os.system('cls')
+      print("About the Application")
+      print("==========================")
+      print("")
+      print("Application Info:")
+      print("==========================")
+      print("Company Credit Card Reporting and Forecasting Application")
+      print("WGU C964 - Computer Science Capstone")
+      print("Version: 1.1")
+      print("Release Notes: Final Submission for WGU Computer Science Capstone (SIM3 Task 2)")
+      print("")
+      print("Devloper Credits:")
+      print("==========================")
+      print("Author: Tyler Petrow")
+      print("WGU Student ID: 011118169")
+      print("GitHub Repository: https://github.com/tpetrow-portfolio")
+      print("")
+      break
+
+    # if user selects 0) Exit
+    elif(mainSelect == "0"):
+      os.system('cls')
+      print("Exiting Application...")
+
+    # if user makes incorrect selection
+    else:
+      os.system('cls')
+      print("Invalid Selection...")
+      break
+
+main()

@@ -140,7 +140,7 @@ def tripReport(userYear, userTrip):
   plt.show()  # display the entire figure
 
 
-# function will formulate summary report from user input year
+# function will formulate table of charges from user input year, and trip
 def chargeTable_by_trip(userYear, userTrip):
   # convert user input to integer
   userYear = int(userYear)
@@ -155,6 +155,7 @@ def chargeTable_by_trip(userYear, userTrip):
   print(employeeTable)  # print table
 
 
+# function will formulate table of charges from user input year
 def chargeTable_by_year(userYear):
   # convert user input to integer
   userYear = int(userYear)
@@ -164,6 +165,53 @@ def chargeTable_by_year(userYear):
   employeeTable = tabulate(year_expenditure_data, headers=headerList, tablefmt='fancy_grid', showindex=False)  # create table of charges from user-selected trip and year
   
   print(employeeTable)  # print table
+
+
+  # function will formulate summary report from user input year
+def yearReport(userYear):
+  # convert user input to integer
+  userYear = int(userYear)
+
+  # parse dataframes for user specified data
+  year_expenditure_data = pd.DataFrame(expendituresDF[expendituresDF['Year'] == userYear])  # total expenditure data filtered out from expendituresDF
+  year_budget_data = pd.DataFrame(budgetDF[budgetDF['Year'] == userYear])  # total budget data filtered out from budgetDF
+  totalYearSpending = year_expenditure_data.groupby('Trip ID')['Price'].sum()  # total expenditures grouped by trip number
+  totalYearBudget = year_budget_data.groupby('Trip ID')['Total Budget'].sum()  # total budget grouped by trip number
+
+  # ensure both series have the same trip IDs for merging
+  merged_data = pd.merge(totalYearSpending, totalYearBudget, left_index=True, right_index=True)
+  merged_data.columns = ['Total Spending', 'Total Budget']
+
+  # create scatter plot
+  plt.figure(figsize=(12, 8))
+
+  # plot total budget as black dots
+  plt.scatter(merged_data.index, merged_data['Total Budget'], color='black', label='Budget', zorder=2, s=50)
+
+  # plot total spending as green or red dots (green under budget, red over budget)
+  colors = ['red' if spending > budget else 'green' for spending, budget in zip(merged_data['Total Spending'], merged_data['Total Budget'])]
+  sizes = [100 if color == 'red' else 50 for color in colors]  # Larger size for red dots
+  plt.scatter(merged_data.index, merged_data['Total Spending'], color=colors, edgecolor='black', label='Spending', zorder=3, s=sizes)
+
+  plt.xticks(range(1, 21))  # put all 20 trips on x-axis
+
+  # add labels and title
+  plt.xlabel('Trip Number')
+  plt.ylabel('Dollar Amount')
+  plt.title('Trip Spending and Budget Comparison')
+
+  plt.grid(True)  # add grid for readability
+
+  plt.show()  # show plot
+
+
+# CLUSTER ALGO
+# TABLE OF TOP 10 MOST EXPENSIVE TRIPS?
+# Most expensive trip
+# Top 10% of trips
+# Bottom 10% of trips
+# Least expensive trip
+  
 
 ###################################
 # Main Menu UI of program

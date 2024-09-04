@@ -30,8 +30,7 @@ totalBudget2022 = pd.DataFrame(budgetDF[budgetDF['Year'] == 2022]).groupby(['Tri
 totalBudget2023 = pd.DataFrame(budgetDF[budgetDF['Year'] == 2023]).groupby(['Trip ID'])['Total Budget'].sum()
 
 # dataframes used for 5-year summary info
-total5YearSpending = pd.DataFrame(expendituresDF).groupby(['Year','Trip ID'])['Price'].sum()
-total5YearBudgets = pd.DataFrame(budgetDF).groupby(['Year','Trip ID'])['Total Budget'].sum()
+
 
 
 # function will formulate trip report from user input year and trip number
@@ -75,7 +74,7 @@ def tripReport(userYear, userTrip):
   
   # create subplots
   fig, axes = plt.subplots(nrows=6, ncols=2, figsize=(20, 40))
-  fig.subplots_adjust(left= 0.125, bottom=0.03, right=0.7, top=0.95, hspace=1, wspace=0.25)  # adjust top margin and vertical spacin
+  fig.subplots_adjust(left= 0.125, bottom=0.03, right=0.7, top=0.95, hspace=1, wspace=0.25)  # adjust top margin and vertical spacing
     
   # function to create pie charts
   def plot_pie(ax, spent, budget, title):
@@ -167,43 +166,66 @@ def chargeTable_by_year(userYear):
   print(employeeTable)  # print table
 
 
-  # function will formulate summary report from user input year
-def yearReport(userYear):
+# function will formulate summary report from user input year, and has ability to create a subplot if needed
+def yearReport(userYear, ax=None):
   # convert user input to integer
   userYear = int(userYear)
-
-  # parse dataframes for user specified data
-  year_expenditure_data = pd.DataFrame(expendituresDF[expendituresDF['Year'] == userYear])  # total expenditure data filtered out from expendituresDF
-  year_budget_data = pd.DataFrame(budgetDF[budgetDF['Year'] == userYear])  # total budget data filtered out from budgetDF
-  totalYearSpending = year_expenditure_data.groupby('Trip ID')['Price'].sum()  # total expenditures grouped by trip number
-  totalYearBudget = year_budget_data.groupby('Trip ID')['Total Budget'].sum()  # total budget grouped by trip number
-
+    
+  # parse dataframes for user-specified data
+  year_expenditure_data = pd.DataFrame(expendituresDF[expendituresDF['Year'] == userYear])
+  year_budget_data = pd.DataFrame(budgetDF[budgetDF['Year'] == userYear])
+  totalYearSpending = year_expenditure_data.groupby('Trip ID')['Price'].sum()
+  totalYearBudget = year_budget_data.groupby('Trip ID')['Total Budget'].sum()
+    
   # ensure both series have the same trip IDs for merging
   merged_data = pd.merge(totalYearSpending, totalYearBudget, left_index=True, right_index=True)
   merged_data.columns = ['Total Spending', 'Total Budget']
-
-  # create scatter plot
-  plt.figure(figsize=(12, 8))
-
-  # plot total budget as black dots
-  plt.scatter(merged_data.index, merged_data['Total Budget'], color='black', label='Budget', zorder=2, s=50)
-
-  # plot total spending as green or red dots (green under budget, red over budget)
+    
+  # use provided Axes object or create a new one
+  if ax is None:
+      fig, ax = plt.subplots(figsize=(12, 8))
+      fig.subplots_adjust(left= 0.125, bottom=0.03, right=0.7, top=0.95, hspace=1, wspace=0.25)  # adjust top margin and vertical spacing
+    
+  # plot on the Axes object
+  ax.scatter(merged_data.index, merged_data['Total Budget'], color='black', label='Budget', zorder=2, s=50)
+  
   colors = ['red' if spending > budget else 'green' for spending, budget in zip(merged_data['Total Spending'], merged_data['Total Budget'])]
-  sizes = [100 if color == 'red' else 50 for color in colors]  # Larger size for red dots
-  plt.scatter(merged_data.index, merged_data['Total Spending'], color=colors, edgecolor='black', label='Spending', zorder=3, s=sizes)
+  sizes = [100 if color == 'red' else 50 for color in colors]
+  ax.scatter(merged_data.index, merged_data['Total Spending'], color=colors, edgecolor='black', label='Spending', zorder=3, s=sizes)
 
-  plt.xticks(range(1, 21))  # put all 20 trips on x-axis
+  ax.set_xticks(range(1, 21))  # put all 20 trips on x-axis
 
   # add labels and title
-  plt.xlabel('Trip Number')
-  plt.ylabel('Dollar Amount')
-  plt.title('Trip Spending and Budget Comparison')
+  ax.set_xlabel('Trip Number')
+  ax.set_ylabel('Dollar Amount')
+  ax.set_title('Trip Spending and Budget Comparison for ' + str(userYear))
 
-  plt.grid(True)  # add grid for readability
+  ax.grid(True)  # add grid for readability
 
   plt.show()  # show plot
 
+
+# function will generate a subplot of 5 years of data using yearReport function
+def five_year_report():
+  # define years for the subplots - allows for scalability in future
+  years = budgetDF['Year'].unique()
+    
+  # create a 3x2 grid of subplots
+  fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(5, 10))
+  
+    
+  axes = axes.flatten()  # flatten the 2D array of axes for easy iteration
+  
+  # generate plots for each year
+  for i, year in enumerate(years):
+      yearReport(year, axes[i])
+    
+  axes[len(years)].axis('off')  # hide the unused subplot
+
+  plt.subplots_adjust(left=0.04, right=1, top=0.95, bottom=0.1, wspace=0.223, hspace=0.45)
+    
+  plt.tight_layout()
+  plt.show()
 
 # CLUSTER ALGO
 # TABLE OF TOP 10 MOST EXPENSIVE TRIPS?
@@ -273,7 +295,7 @@ def main():
 
     # if user selects 2) 5-year Summary Reporting
     elif mainSelect == "2":
-      print("5-year Summary Reporting")
+      five_year_report()
 
     # if user selects 3) Forecast Data
     elif mainSelect == "3":
@@ -296,9 +318,10 @@ def main():
       print("==========================")
       print("Author: Tyler Petrow")
       print("WGU Student ID: 011118169")
-      print("GitHub Repository: https://github.com/tpetrow-portfolio")
+      print("GitHub Repository: https://github.com/tpetrow-portfolio/Credit-Card-Expense-Application/")
       print("")
-      break
+      print("")
+      input("Press ENTER to return to main menu....")
 
     # if user selects 0) Exit
     elif(mainSelect == "0"):
@@ -309,6 +332,5 @@ def main():
     else:
       os.system('cls')
       print("Invalid Selection...")
-      break
 
 main()

@@ -126,11 +126,13 @@ def tripReport(userYear, userTrip):
   
   totalSpentAmount = travel['Price'].sum() + lodging['Price'].sum() + dining['Price'].sum() + incidental['Price'].sum() + per_diem['Price'].sum()
   plot_bar(axes[5, 1], totalSpentAmount, totalBudget, 'Total Expenditure Bar')
+
+  plt.tight_layout()
   
   plt.show()  # display the entire figure
 
 
-# function will formulate table of charges from user input year, and trip
+# function will formulate tabulated table of charges from user input year, and trip
 def chargeTable_by_trip(userYear, userTrip):
   # convert user input to integer
   userYear = int(userYear)
@@ -152,7 +154,7 @@ def chargeTable_by_trip(userYear, userTrip):
   print(chargeTable)  # print table
 
 
-# function will formulate table of charges from user input year
+# function will formulate tabulated table of charges from user input year
 def chargeTable_by_year(userYear):
   # convert user input to integer
   userYear = int(userYear)
@@ -165,8 +167,32 @@ def chargeTable_by_year(userYear):
 
   # create table of charges from user-selected trip and year
   chargeTable = tabulate(year_expenditure_data, headers=headerList, tablefmt='fancy_grid', showindex=False)  
-  
+
   print(chargeTable)  # print table
+
+
+# function will formulate tabulated table of over-budget trips
+def over_budget_table():
+  # filter trips where expenditures exceed the budget
+  overBudget = merged_DF[merged_DF['Total Expenditure'] > merged_DF['Total Budget']]
+  
+  # sort by Total Expenditure in descending order
+  overBudget = overBudget.sort_values(by='Total Expenditure', ascending=False)
+  
+  # reset index for better table formatting
+  overBudget = overBudget.reset_index(drop=True)
+  
+  # select relevant columns for the table
+  overBudgetTable = overBudget[['Trip ID', 'Year', 'Total Expenditure']]
+  
+  # create list of column headers for the table
+  headerList = ['Trip ID', 'Year', 'Total Expenditure']
+  
+  # create table using tabulate
+  chargeTable = tabulate(overBudgetTable, headers=headerList, tablefmt='fancy_grid', showindex=False)
+  
+  # print the table
+  print(chargeTable)
 
 
 # function will formulate summary report from user input year, and has ability to create a subplot if needed
@@ -211,30 +237,6 @@ def yearReport(userYear, userax=None):
 
   if userax is None:
     plt.show()  # display the plot if no Axes object was passed
-
-
-# function will formulate table of over-budget trips
-def over_budget_table():
-    # filter trips where expenditures exceed the budget
-    overBudget = merged_DF[merged_DF['Total Expenditure'] > merged_DF['Total Budget']]
-    
-    # sort by Total Expenditure in descending order
-    overBudget = overBudget.sort_values(by='Total Expenditure', ascending=False)
-    
-    # reset index for better table formatting
-    overBudget = overBudget.reset_index(drop=True)
-    
-    # select relevant columns for the table
-    overBudgetTable = overBudget[['Trip ID', 'Year', 'Total Expenditure']]
-    
-    # create list of column headers for the table
-    headerList = ['Trip ID', 'Year', 'Total Expenditure']
-    
-    # create table using tabulate
-    chargeTable = tabulate(overBudgetTable, headers=headerList, tablefmt='fancy_grid', showindex=False)
-    
-    # print the table
-    print(chargeTable)
 
 
 # function will cluster data utilizing DBSCAN algorithm, finding relationship between expenditure amounts vs total length of trip
@@ -313,6 +315,8 @@ def average_pie():
   plt.title('Over-Budget Average')
   plt.axis('equal')
 
+  plt.tight_layout()
+
   plt.show()  # display the entire figure
 
 
@@ -334,6 +338,8 @@ def plot_most_expensive_trips():
     # highlight the most expensive trip
     max_expense_index = top_10_percent['Total Expenditure'].idxmax()
     bars[top_10_percent.index.get_loc(max_expense_index)].set_color('red')
+
+    plt.tight_layout()
 
     plt.xticks(rotation=90)
     plt.show()
@@ -358,11 +364,62 @@ def plot_cheapest_trips():
     min_expense_index = bottom_10_percent['Total Expenditure'].idxmin()
     bars[bottom_10_percent.index.get_loc(min_expense_index)].set_color('orange')
 
+    plt.tight_layout()
+
     plt.xticks(rotation=90)
     plt.show()
 
+
+# function will generate a new budget amount for each budget category from past 5 year expenditure data
 def forecast():
-   print()
+  # list of years to plot
+  years = budgetDF['Year'].unique()  # define years for the subplots - allows for scalability in future
+  
+  # prepare a DataFrame to hold average expenditures for each year
+  avg_expenditure = pd.DataFrame()
+  
+  # calculate the average expenditure for each category by year
+  for year in years:
+    year_data = expendituresDF[expendituresDF['Year'] == year]
+    avg_per_category = year_data.groupby('Expense Category')['Price'].mean().reset_index()
+    avg_per_category['Year'] = year
+    avg_expenditure = pd.concat([avg_expenditure, avg_per_category], axis=0)
+  
+  # calculate the overall mean expenditure for each category
+  overall_avg = expendituresDF.groupby('Expense Category')['Price'].mean().reset_index()
+  overall_avg['Year'] = 'Mean'
+  
+  # plot the data
+  plt.figure(figsize=(14, 8))
+  colors = ['blue', 'orange', 'green', 'red', 'purple']
+  
+  for i, year in enumerate(years):
+    year_data = avg_expenditure[avg_expenditure['Year'] == year]
+    plt.plot(year_data['Expense Category'], year_data['Price'], 
+              linestyle='--', marker='o', markersize=2, color=colors[i], 
+              alpha=0.5, label=f'{year}')
+  
+  # plot the mean line
+  plt.plot(overall_avg['Expense Category'], overall_avg['Price'], 
+            linestyle='-', marker='o', color='black', 
+            linewidth=2.5, markersize=8, label='Forecasted Budget')
+  
+  plt.xlabel('Category')
+  plt.ylabel('Average Expenditure')
+  plt.title('Average Expenditure by Category for Each Year')
+  plt.xticks(rotation=45, ha='right')
+  plt.grid(True)
+  plt.legend()
+  plt.tight_layout()
+  
+  plt.show()
+
+
+      # give user an option to see a table (would be one row)
+        # Year                Category name -------  Total Budget
+        # Forecasted (2024)     $$$ -----------------  $$$
+
+      # because 75% of trips were under budget, the new budget might be lower than other budgets and can save company money
 
 
 
@@ -461,15 +518,15 @@ def main():
             print("Invalid Selection")
             print(" ")   
 
-
     # if user selects 3) Clustered Data
     elif mainSelect == "3":
-      trip_clustering()
+      trip_clustering()  # call trip_clustering function to display plot of clustered data
       os.system('cls')
 
     # if user selects 4) Forecast Data
     elif mainSelect == "4":
-      forecast()
+      forecast()  # call forecast function to display forecast line plot
+      forecasted_budget_table()  # call forecasted_budget_table function to print table of new budget data
       os.system('cls')
 
     # if user selects 4) About the Application

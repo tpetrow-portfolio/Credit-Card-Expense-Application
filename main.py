@@ -170,7 +170,9 @@ def chargeTable_by_year(userYear):
 
 
 # function will formulate summary report from user input year, and has ability to create a subplot if needed
-def yearReport(userYear, ax=None):
+def yearReport(userYear, userax=None):
+  # note: userax helps when calling yearReport with only one parameter (i.e. yearReport(2019))
+
   # convert user input to integer
   userYear = int(userYear)
     
@@ -185,9 +187,11 @@ def yearReport(userYear, ax=None):
   merged_data.columns = ['Total Spending', 'Total Budget']
     
   # use provided Axes object or create a new one
-  if ax is None:
+  if userax is None:  # if the user does not specify an ax
     fig, ax = plt.subplots(figsize=(12, 8))
     fig.subplots_adjust(left= 0.125, bottom=0.03, right=0.7, top=0.95, hspace=1, wspace=0.25)  # adjust top margin and vertical spacing
+  else:  # if the user specifies an ax
+     ax = userax
     
   # plot on the Axes object
   ax.scatter(merged_data.index, merged_data['Total Budget'], color='black', label='Budget', zorder=2, s=50)
@@ -204,6 +208,9 @@ def yearReport(userYear, ax=None):
   ax.set_title('Trip Spending and Budget Comparison for ' + str(userYear))
 
   ax.grid(True)  # add grid for readability
+
+  if userax is None:
+    plt.show()  # display the plot if no Axes object was passed
 
 
 # function will formulate table of over-budget trips
@@ -309,6 +316,56 @@ def average_pie():
   plt.show()  # display the entire figure
 
 
+# function will generate a bar chart of the top 10% most expensive trips, and highlight the most expensive trip's bar
+def plot_most_expensive_trips():
+    # identify the top 10% most expensive trips
+    top_10_percent_threshold = merged_DF['Total Expenditure'].quantile(0.9)
+    top_10_percent = merged_DF[merged_DF['Total Expenditure'] >= top_10_percent_threshold]
+
+    # combine 'Trip ID' and 'Year' for x-axis labels
+    x_labels = [f"Trip {tid}\nYear {yr}" for tid, yr in zip(top_10_percent['Trip ID'], top_10_percent['Year'])]
+
+    plt.figure(figsize=(14, 7))
+    bars = plt.bar(x_labels, top_10_percent['Total Expenditure'], color='skyblue')
+    plt.xlabel('Trip ID and Year')
+    plt.ylabel('Total Expenditure')
+    plt.title('Top 10% Most Expensive Trips')
+
+    # highlight the most expensive trip
+    max_expense_index = top_10_percent['Total Expenditure'].idxmax()
+    bars[top_10_percent.index.get_loc(max_expense_index)].set_color('red')
+
+    plt.xticks(rotation=90)
+    plt.show()
+
+
+# function will generate a bar chart of the bottom 10% least expensive trips, and highlight the least expensive trip's bar
+def plot_cheapest_trips():
+    # identify the bottom 10% least expensive trips
+    bottom_10_percent_threshold = merged_DF['Total Expenditure'].quantile(0.1)
+    bottom_10_percent = merged_DF[merged_DF['Total Expenditure'] <= bottom_10_percent_threshold]
+
+    # combine 'Trip ID' and 'Year' for x-axis labels
+    x_labels = [f"Trip {tid}\nYear {yr}" for tid, yr in zip(bottom_10_percent['Trip ID'], bottom_10_percent['Year'])]
+
+    plt.figure(figsize=(14, 7))
+    bars = plt.bar(x_labels, bottom_10_percent['Total Expenditure'], color='lightgreen')
+    plt.xlabel('Trip ID and Year')
+    plt.ylabel('Total Expenditure')
+    plt.title('Bottom 10% Least Expensive Trips')
+
+    # highlight the least expensive trip
+    min_expense_index = bottom_10_percent['Total Expenditure'].idxmin()
+    bars[bottom_10_percent.index.get_loc(min_expense_index)].set_color('orange')
+
+    plt.xticks(rotation=90)
+    plt.show()
+
+def forecast():
+   print()
+
+
+
 ###################################
 # Main Menu UI of program
 def main():
@@ -371,36 +428,38 @@ def main():
     # if user selects 2) 5-year Summary Reporting
     elif mainSelect == "2":
       five_year_report()
-      os.system('cls')
-      print("5-Year Summary Reporting")
-      print("------------------------")
-      print("1) Explore Total Over-Budget Trip Data")
-      print("2) Explore Most Expensive Trip Data")
-      print("3) Explore Least Expensive Trip Data")
-      print("")
-      print("Enter 0 to return to main menu")
-      print("=================================")
-      print("")
-      innerSelect = input("Enter Selection: ")
+      innerSelect = 1
+      while innerSelect != 0:
+        os.system('cls')
+        print("5-Year Summary Reporting")
+        print("------------------------")
+        print("1) Explore Total Over-Budget Trip Data")
+        print("2) Explore Most Expensive Trip Data")
+        print("3) Explore Least Expensive Trip Data")
+        print("")
+        print("Enter 0 to return to main menu")
+        print("=================================")
+        print("")
+        innerSelect = input("Enter Selection: ")
 
-      if innerSelect == 1:  # if user wants to explore total over-budget trip data
-         average_pie()
-         chargeTableDisplay = input("Would you like to see a list of all over-budget trips? (Y/N): ")
-         if chargeTableDisplay in ('Y','y'):
-            os.system('cls')
-            over_budget_table  # call over_budget_table function to print a chart of all over-budget trips
-            print("")
-            input("Press ENTER to return to main menu....")
-            break
-      elif innerSelect == "2":
-         print()
-      elif innerSelect == "3":
-         print()
-      elif innerSelect == "0":
-         break
-      else:
-          print("Invalid Selection")
-          print(" ")   
+        if innerSelect == "1":  # if user wants to explore total over-budget trip data
+          average_pie()
+          chargeTableDisplay = input("Would you like to see a list of all over-budget trips? (Y/N): ")
+          if chargeTableDisplay in ('Y','y'):
+              os.system('cls')
+              over_budget_table()  # call over_budget_table function to print a chart of all over-budget trips
+              print("")
+              input("Press ENTER to return to main menu....")
+              break
+        elif innerSelect == "2":
+          plot_most_expensive_trips()
+        elif innerSelect == "3":
+          plot_cheapest_trips()
+        elif innerSelect == "0":
+          break
+        else:
+            print("Invalid Selection")
+            print(" ")   
 
 
     # if user selects 3) Clustered Data
@@ -408,9 +467,10 @@ def main():
       trip_clustering()
       os.system('cls')
 
-    # if user selects 4) Clustered Data
+    # if user selects 4) Forecast Data
     elif mainSelect == "4":
-      print("Forecast Data")
+      forecast()
+      os.system('cls')
 
     # if user selects 4) About the Application
     elif mainSelect == "5":

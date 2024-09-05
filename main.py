@@ -195,6 +195,30 @@ def over_budget_table():
   print(chargeTable)
 
 
+# function will formulate a tabulated table of categorical forecasted budget amounts
+def forecasted_budget_table():
+  # calculate average expenditure for each category
+  travel_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Travel']['Price'].mean()),2)
+  lodging_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Lodging']['Price'].mean()),2)
+  dining_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Dining']['Price'].mean()),2)
+  incidental_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Incidental']['Price'].mean()),2)
+  per_diem_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Other']['Price'].mean()),2)
+  total_budget_avg = round((travel_avg + lodging_avg + dining_avg + incidental_avg + per_diem_avg),2)
+
+  # create list of lists for table rows
+  budget_data = [['2024 (Forecasted)',total_budget_avg,travel_avg,dining_avg,lodging_avg,per_diem_avg,incidental_avg],
+                 ['2024 (Rounded)',round(total_budget_avg,-2),round(travel_avg,-1),round(dining_avg,-1),round(lodging_avg,-1),
+                  round(per_diem_avg,-1),round(incidental_avg,-1)]] 
+
+  # create list of column headers for table
+  headerList = ['Year','Total Budget','Travel','Dining','Lodging','Per Diem','Incidental']
+
+  # create table of categorical forecasted budget amounts
+  budgetTable = tabulate(budget_data, headers=headerList, tablefmt='fancy_grid', showindex=False)  
+
+  print(budgetTable)  # print table
+
+
 # function will formulate summary report from user input year, and has ability to create a subplot if needed
 def yearReport(userYear, userax=None):
   # note: userax helps when calling yearReport with only one parameter (i.e. yearReport(2019))
@@ -520,14 +544,16 @@ def main():
 
     # if user selects 3) Clustered Data
     elif mainSelect == "3":
-      trip_clustering()  # call trip_clustering function to display plot of clustered data
       os.system('cls')
+      trip_clustering()  # call trip_clustering function to display plot of clustered data
 
     # if user selects 4) Forecast Data
     elif mainSelect == "4":
+      os.system('cls')
       forecast()  # call forecast function to display forecast line plot
       forecasted_budget_table()  # call forecasted_budget_table function to print table of new budget data
-      os.system('cls')
+      print("")
+      input("Press ENTER to return to main menu....")
 
     # if user selects 4) About the Application
     elif mainSelect == "5":

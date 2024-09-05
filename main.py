@@ -64,7 +64,7 @@ def tripReport(userYear, userTrip):
                          (budgetDF['Year'] == userYear)].iloc[0]['Total Budget']
 
   # create subplots
-  fig, axes = plt.subplots(nrows=6, ncols=2, figsize=(20, 40))
+  fig, axes = plt.subplots(nrows=6, ncols=2, figsize=(14, 7))
   fig.subplots_adjust(left= 0.125, bottom=0.03, right=0.7, top=0.95, hspace=1, wspace=0.25)  # adjust top margin and vertical spacing
     
   # function to create pie charts
@@ -126,8 +126,6 @@ def tripReport(userYear, userTrip):
   
   totalSpentAmount = travel['Price'].sum() + lodging['Price'].sum() + dining['Price'].sum() + incidental['Price'].sum() + per_diem['Price'].sum()
   plot_bar(axes[5, 1], totalSpentAmount, totalBudget, 'Total Expenditure Bar')
-
-  plt.tight_layout()
   
   plt.show()  # display the entire figure
 
@@ -446,8 +444,7 @@ def forecast():
       # because 75% of trips were under budget, the new budget might be lower than other budgets and can save company money
 
 
-
-###################################
+##############################################################################
 # Main Menu UI of program
 def main():
   mainSelect = "1"
@@ -465,13 +462,38 @@ def main():
     print("")
     mainSelect = input("Enter Selection: ")
 
-    # if user selects a year to generate reports on
-    if mainSelect in ['2019','2020','2021','2022','2023']:
-      innerSelect = 1
+    # if user selects a year to generate reports on (user can select a year from main menu or 1 for another menu of years to choose from)
+    if mainSelect in ['1','2019','2020','2021','2022','2023']:
+      if mainSelect == '1':  # if user selects "option 1" rather than a year from main menu
+        yearSelect = 1
+        while yearSelect not in ['0','2019','2020','2021','2022','2023']:  # display menu for user to select a year until they select an appropriate year
+          os.system('cls')
+          print("Year Reporting")
+          print("===============")
+          print("Please Select a Year:")
+          print("")
+          print("* 2019")
+          print("* 2020")
+          print("* 2021")
+          print("* 2022")
+          print("* 2023")
+          print("")
+          print("0) Back to Main Menu")
+          print("=================================")
+          print("")
+          yearSelect = input("Enter Selection: ")
+        if yearSelect in ['2019','2020','2021','2022','2023']:
+          mainSelect = yearSelect
+          innerSelect = 1
+        elif yearSelect == '0':
+           innerSelect = 0
+      else:
+         innerSelect = 1
+
       while innerSelect != 0:
         os.system('cls')
         print(mainSelect + " Year Reporting")
-        print("---------------------------")
+        print("=================================")
         print("Enter Trip Number (1-20)")
         print("  -OR-")
         print("Enter (s) for a summary of " + mainSelect)
@@ -491,7 +513,6 @@ def main():
             input("Press ENTER to return to main menu....")
             break
         elif innerSelect in ('s','S'):  # if user selects 's' for summary
-          os.system('cls')
           yearReport(mainSelect)  # call yearReport function to generate summary charts for user-selected year
           chargeTableDisplay = input("Would you like to see a breakdown of all charges for " + mainSelect + "? (Y/N): ")
           if chargeTableDisplay in ('Y','y'):
@@ -530,8 +551,7 @@ def main():
               os.system('cls')
               over_budget_table()  # call over_budget_table function to print a chart of all over-budget trips
               print("")
-              input("Press ENTER to return to main menu....")
-              break
+              input("Press ENTER to close....")
         elif innerSelect == "2":
           plot_most_expensive_trips()
         elif innerSelect == "3":
@@ -555,7 +575,7 @@ def main():
       print("")
       input("Press ENTER to return to main menu....")
 
-    # if user selects 4) About the Application
+    # if user selects 5) About the Application
     elif mainSelect == "5":
       os.system('cls')
       print("About the Application")

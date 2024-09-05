@@ -21,7 +21,7 @@ budgetDF = pd.read_csv('trip_information.csv')
 total_expenditures = expendituresDF.groupby(['Trip ID', 'Year'])['Price'].sum().reset_index()
 total_expenditures.columns = ['Trip ID', 'Year', 'Total Expenditure']
 
-# merge total budget per trip with total spending per trip
+# merge total budget per trip with total spending per trip for later use
 merged_DF = pd.merge(budgetDF, total_expenditures, on=['Trip ID', 'Year'])
 
 
@@ -130,93 +130,6 @@ def tripReport(userYear, userTrip):
   plt.show()  # display the entire figure
 
 
-# function will formulate tabulated table of charges from user input year, and trip
-def chargeTable_by_trip(userYear, userTrip):
-  # convert user input to integer
-  userYear = int(userYear)
-  userTrip = int(userTrip)
-
-  # filter expenditures for the user-selected trip and year
-  all_trip_charges = expendituresDF[(expendituresDF['Trip ID'] == userTrip) &    
-                    (expendituresDF['Year'] == userYear)].sort_values(by = 'Expense Category')
-  
-  # drop the index column, not needed in table
-  all_trip_charges = all_trip_charges.reset_index(drop=True)  
-
-  # create list of column headers for table
-  headerList = ['Employee ID','Trip ID','Trip Year','Charge Number', 'Expense Name', 'Expense Category', "Price"]
-
-  # create table of charges from user-selected trip and year
-  chargeTable = tabulate(all_trip_charges, headers=headerList, tablefmt='fancy_grid', showindex=False)
-  
-  print(chargeTable)  # print table
-
-
-# function will formulate tabulated table of charges from user input year
-def chargeTable_by_year(userYear):
-  # convert user input to integer
-  userYear = int(userYear)
-
-  # total expenditure data filtered out from expendituresDF
-  year_expenditure_data = pd.DataFrame(expendituresDF[expendituresDF['Year'] == userYear])  
-
-  # create list of column headers for table
-  headerList = ['Employee ID','Trip ID','Trip Year','Charge Number', 'Expense Name', 'Expense Category', "Price"]  
-
-  # create table of charges from user-selected trip and year
-  chargeTable = tabulate(year_expenditure_data, headers=headerList, tablefmt='fancy_grid', showindex=False)  
-
-  print(chargeTable)  # print table
-
-
-# function will formulate tabulated table of over-budget trips
-def over_budget_table():
-  # filter trips where expenditures exceed the budget
-  overBudget = merged_DF[merged_DF['Total Expenditure'] > merged_DF['Total Budget']]
-  
-  # sort by Total Expenditure in descending order
-  overBudget = overBudget.sort_values(by='Total Expenditure', ascending=False)
-  
-  # reset index for better table formatting
-  overBudget = overBudget.reset_index(drop=True)
-  
-  # select relevant columns for the table
-  overBudgetTable = overBudget[['Trip ID', 'Year', 'Total Expenditure']]
-  
-  # create list of column headers for the table
-  headerList = ['Trip ID', 'Year', 'Total Expenditure']
-  
-  # create table using tabulate
-  chargeTable = tabulate(overBudgetTable, headers=headerList, tablefmt='fancy_grid', showindex=False)
-  
-  # print the table
-  print(chargeTable)
-
-
-# function will formulate a tabulated table of categorical forecasted budget amounts
-def forecasted_budget_table():
-  # calculate average expenditure for each category
-  travel_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Travel']['Price'].mean()),2)
-  lodging_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Lodging']['Price'].mean()),2)
-  dining_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Dining']['Price'].mean()),2)
-  incidental_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Incidental']['Price'].mean()),2)
-  per_diem_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Other']['Price'].mean()),2)
-  total_budget_avg = round((travel_avg + lodging_avg + dining_avg + incidental_avg + per_diem_avg),2)
-
-  # create list of lists for table rows
-  budget_data = [['2024 (Forecasted)',total_budget_avg,travel_avg,dining_avg,lodging_avg,per_diem_avg,incidental_avg],
-                 ['2024 (Rounded)',round(total_budget_avg,-2),round(travel_avg,-1),round(dining_avg,-1),round(lodging_avg,-1),
-                  round(per_diem_avg,-1),round(incidental_avg,-1)]] 
-
-  # create list of column headers for table
-  headerList = ['Year','Total Budget','Travel','Dining','Lodging','Per Diem','Incidental']
-
-  # create table of categorical forecasted budget amounts
-  budgetTable = tabulate(budget_data, headers=headerList, tablefmt='fancy_grid', showindex=False)  
-
-  print(budgetTable)  # print table
-
-
 # function will formulate summary report from user input year, and has ability to create a subplot if needed
 def yearReport(userYear, userax=None):
   # note: userax helps when calling yearReport with only one parameter (i.e. yearReport(2019))
@@ -261,6 +174,95 @@ def yearReport(userYear, userax=None):
     plt.show()  # display the plot if no Axes object was passed
 
 
+# function will formulate tabulated table of charges from user input year, and trip
+def chargeTable_by_trip(userYear, userTrip):
+  # convert user input to integer
+  userYear = int(userYear)
+  userTrip = int(userTrip)
+
+  # filter expenditures for the user-selected trip and year
+  all_trip_charges = expendituresDF[(expendituresDF['Trip ID'] == userTrip) &    
+                    (expendituresDF['Year'] == userYear)].sort_values(by = 'Expense Category')
+  
+  # drop the index column, not needed in table
+  all_trip_charges = all_trip_charges.reset_index(drop=True)  
+
+  # create list of column headers for table
+  headerList = ['Employee ID','Trip ID','Trip Year','Charge Number', 'Expense Name', 'Expense Category', "Price"]
+
+  # create table of charges from user-selected trip and year
+  chargeTable = tabulate(all_trip_charges, headers=headerList, tablefmt='fancy_grid', showindex=False)
+  
+  print(chargeTable)  # print table
+
+
+# function will formulate tabulated table of charges from user input year
+def chargeTable_by_year(userYear):
+  # convert user input to integer
+  userYear = int(userYear)
+
+  # total expenditure data filtered out from expendituresDF
+  year_expenditure_data = pd.DataFrame(expendituresDF[expendituresDF['Year'] == userYear])
+
+  # drop the index column, not needed in table
+  year_expenditure_data = year_expenditure_data.reset_index(drop=True)  
+
+  # create list of column headers for table
+  headerList = ['Employee ID','Trip ID','Trip Year','Charge Number', 'Expense Name', 'Expense Category', "Price"]  
+
+  # create table of charges from user-selected trip and year
+  chargeTable = tabulate(year_expenditure_data, headers=headerList, tablefmt='fancy_grid', showindex=False)  
+
+  print(chargeTable)  # print table
+
+
+# function will formulate tabulated table of over-budget trips
+def over_budget_table():
+  # filter trips where expenditures exceed the budget
+  overBudget = merged_DF[merged_DF['Total Expenditure'] > merged_DF['Total Budget']]
+  
+  # sort by Total Expenditure in descending order
+  overBudget = overBudget.sort_values(by='Total Expenditure', ascending=False)
+  
+  # reset index for better table formatting
+  overBudget = overBudget.reset_index(drop=True)
+  
+  # select relevant columns for the table
+  overBudgetTable = overBudget[['Trip ID', 'Year', 'Total Expenditure']]
+  
+  # create list of column headers for the table
+  headerList = ['Trip ID', 'Year', 'Total Expenditure']
+  
+  # create table of over-budget trips
+  chargeTable = tabulate(overBudgetTable, headers=headerList, tablefmt='fancy_grid', showindex=False)
+  
+  print(chargeTable)  # print table
+
+
+# function will formulate a tabulated table of categorical forecasted budget amounts
+def forecasted_budget_table():
+  # calculate average expenditure for each category
+  travel_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Travel']['Price'].mean()),2)
+  lodging_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Lodging']['Price'].mean()),2)
+  dining_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Dining']['Price'].mean()),2)
+  incidental_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Incidental']['Price'].mean()),2)
+  per_diem_avg = round((expendituresDF[expendituresDF['Expense Category'] == 'Other']['Price'].mean()),2)
+  total_budget_avg = round((travel_avg + lodging_avg + dining_avg + incidental_avg + per_diem_avg),2)
+
+  # create list of lists for table rows
+  budget_data = [['2024 (Forecasted)',total_budget_avg,travel_avg,dining_avg,lodging_avg,per_diem_avg,incidental_avg],
+                 ['2024 (Rounded)',round(total_budget_avg,-2),round(travel_avg,-1),round(dining_avg,-1),round(lodging_avg,-1),
+                  round(per_diem_avg,-1),round(incidental_avg,-1)]] 
+
+  # create list of column headers for table
+  headerList = ['Year','Total Budget','Travel','Dining','Lodging','Per Diem','Incidental']
+
+  # create table of categorical forecasted budget amounts
+  budgetTable = tabulate(budget_data, headers=headerList, tablefmt='fancy_grid', showindex=False)  
+
+  print(budgetTable)  # print table
+
+
 # function will cluster data utilizing DBSCAN algorithm, finding relationship between expenditure amounts vs total length of trip
 def trip_clustering():
   # prepare features for clustering
@@ -301,7 +303,7 @@ def trip_clustering():
 
 # function will generate a subplot of 5 years of data using yearReport function
 def five_year_report():  
-  years = budgetDF['Year'].unique()  # define years for the subplots - allows for scalability in future
+  years = budgetDF['Year'].unique()  # define years for the subplots - allows for scalability
 
   fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(5, 10))  # create a 3x2 grid of subplots
   axes = axes.flatten()  # flatten the 2D array of axes for easy iteration
@@ -315,17 +317,15 @@ def five_year_report():
   plt.subplots_adjust(left=0.04, right=1, top=0.95, bottom=0.1, wspace=0.223, hspace=0.45)
     
   plt.tight_layout()
-  plt.show()
+
+  plt.show()  # display the entire figure
 
 
 # function will generate a pie chart of the percentage of trips that are over/under budget
 def average_pie():
 
-  # Identify trips where expenditures exceed the budget
+  # identify trips where expenditures exceed the budget
   overBudget = merged_DF[merged_DF['Total Expenditure'] > merged_DF['Total Budget']]
-
-  # Calculate the total number of trips dynamically
-  #total_trips = len(merged_DF)
 
   # calculate the percentage of over-budget trips
   over_percentage = len(overBudget)
@@ -351,6 +351,7 @@ def plot_most_expensive_trips():
     # combine 'Trip ID' and 'Year' for x-axis labels
     x_labels = [f"Trip {tid}\nYear {yr}" for tid, yr in zip(top_10_percent['Trip ID'], top_10_percent['Year'])]
 
+    # create bar chart using above data
     plt.figure(figsize=(14, 7))
     bars = plt.bar(x_labels, top_10_percent['Total Expenditure'], color='skyblue')
     plt.xlabel('Trip ID and Year')
@@ -376,6 +377,7 @@ def plot_cheapest_trips():
     # combine 'Trip ID' and 'Year' for x-axis labels
     x_labels = [f"Trip {tid}\nYear {yr}" for tid, yr in zip(bottom_10_percent['Trip ID'], bottom_10_percent['Year'])]
 
+    # create bar chart using above data
     plt.figure(figsize=(14, 7))
     bars = plt.bar(x_labels, bottom_10_percent['Total Expenditure'], color='lightgreen')
     plt.xlabel('Trip ID and Year')
@@ -426,6 +428,7 @@ def forecast():
             linestyle='-', marker='o', color='black', 
             linewidth=2.5, markersize=8, label='Forecasted Budget')
   
+  # customize the graph
   plt.xlabel('Category')
   plt.ylabel('Average Expenditure')
   plt.title('Average Expenditure by Category for Each Year')
@@ -437,17 +440,11 @@ def forecast():
   plt.show()
 
 
-      # give user an option to see a table (would be one row)
-        # Year                Category name -------  Total Budget
-        # Forecasted (2024)     $$$ -----------------  $$$
-
-      # because 75% of trips were under budget, the new budget might be lower than other budgets and can save company money
-
-
 ##############################################################################
 # Main Menu UI of program
 def main():
   mainSelect = "1"
+  # display main menu until user selects 0 to exit
   while mainSelect != "0":
     os.system('cls')  # clear screen
     print("Sample Co.'s Company Credit Card Expenditure Reporting and Forecasting Application")
@@ -490,10 +487,11 @@ def main():
       else:
          innerSelect = 1
 
+      # display year reporting menu until user selects 0
       while innerSelect != 0:
         os.system('cls')
         print(mainSelect + " Year Reporting")
-        print("=================================")
+        print("============================")
         print("Enter Trip Number (1-20)")
         print("  -OR-")
         print("Enter (s) for a summary of " + mainSelect)
@@ -531,10 +529,11 @@ def main():
     elif mainSelect == "2":
       five_year_report()
       innerSelect = 1
+      # display summary reporting menu until user selects 0
       while innerSelect != 0:
         os.system('cls')
         print("5-Year Summary Reporting")
-        print("------------------------")
+        print("========================")
         print("1) Explore Total Over-Budget Trip Data")
         print("2) Explore Most Expensive Trip Data")
         print("3) Explore Least Expensive Trip Data")
@@ -543,8 +542,7 @@ def main():
         print("=================================")
         print("")
         innerSelect = input("Enter Selection: ")
-
-        if innerSelect == "1":  # if user wants to explore total over-budget trip data
+        if innerSelect == "1":  # if user wants to explore total over-budget trip data pie chart
           average_pie()
           chargeTableDisplay = input("Would you like to see a list of all over-budget trips? (Y/N): ")
           if chargeTableDisplay in ('Y','y'):
@@ -552,9 +550,9 @@ def main():
               over_budget_table()  # call over_budget_table function to print a chart of all over-budget trips
               print("")
               input("Press ENTER to close....")
-        elif innerSelect == "2":
+        elif innerSelect == "2":  # if user wants to see bar chart of most expensive trips
           plot_most_expensive_trips()
-        elif innerSelect == "3":
+        elif innerSelect == "3":  # if user wants to see bar chart of least expensive trips
           plot_cheapest_trips()
         elif innerSelect == "0":
           break

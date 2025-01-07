@@ -500,7 +500,7 @@ def main():
         print("=================================")
         print("")
         innerSelect = input("Enter Selection: ")
-        if innerSelect in ('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'):  # if user selects trip number 1-20
+        if int(innerSelect) in range(1,20):  # if user selects trip number 1-20
           tripReport(mainSelect, innerSelect)  # call tripReport function to generate charts for user-selected trip from user-selected year
           print("")
           chargeTableDisplay = input("Would you like to see a breakdown of all charges for trip # " + innerSelect + "? (Y/N): ")
@@ -510,7 +510,7 @@ def main():
             print("")
             input("Press ENTER to return to main menu....")
             break
-        elif innerSelect in ('s','S'):  # if user selects 's' for summary
+        elif str(innerSelect) in ('s','S'):  # if user selects 's' for summary
           yearReport(mainSelect)  # call yearReport function to generate summary charts for user-selected year
           chargeTableDisplay = input("Would you like to see a breakdown of all charges for " + mainSelect + "? (Y/N): ")
           if chargeTableDisplay in ('Y','y'):
